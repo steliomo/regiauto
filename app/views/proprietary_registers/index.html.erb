@@ -1,0 +1,35 @@
+<h1>Listing proprietary_registers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Proprietary</th>
+    <th>Register dute</th>
+    <th>Value</th>
+    <th>Vehicle</th>
+    <th>Notes</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proprietary_registers.each do |proprietary_register| %>
+  <tr>
+    <td><%= proprietary_register.name %></td>
+    <td><%= proprietary_register.proprietary.name %></td>
+    <td><%= proprietary_register.register_dute %></td>
+    <td><%= proprietary_register.value %></td>
+    <td><%= proprietary_register.vehicle.mark %></td>
+    <td><%= proprietary_register.notes %></td>
+    <td><%= proprietary_register.status %></td>
+    <td><%= link_to 'Show', proprietary_register %></td>
+    <td><%= link_to 'Edit', edit_proprietary_register_path(proprietary_register) %></td>
+    <td><%= link_to 'Destroy', proprietary_register, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Proprietary register', new_proprietary_register_path %>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @proprietary_register.name %>
+</p>
+
+<p>
+  <b>Proprietary:</b>
+  <%= @proprietary_register.proprietary %>
+</p>
+
+<p>
+  <b>Register dute:</b>
+  <%= @proprietary_register.register_dute %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @proprietary_register.value %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @proprietary_register.vehicle %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @proprietary_register.notes %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @proprietary_register.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_proprietary_register_path(@proprietary_register) %> |
+<%= link_to 'Back', proprietary_registers_path %>

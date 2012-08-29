@@ -1,0 +1,43 @@
+<h1>Listing hypothecs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Proprietary</th>
+    <th>Applicant</th>
+    <th>Contract document</th>
+    <th>Value</th>
+    <th>Vehicle</th>
+    <th>Outsanding</th>
+    <th>Dept origin</th>
+    <th>Interest rate</th>
+    <th>Notes</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hypothecs.each do |hypothec| %>
+  <tr>
+    <td><%= hypothec.name %></td>
+    <td><%= hypothec.proprietary %></td>
+    <td><%= hypothec.applicant %></td>
+    <td><%= hypothec.contract_document %></td>
+    <td><%= hypothec.value %></td>
+    <td><%= hypothec.vehicle %></td>
+    <td><%= hypothec.outsanding %></td>
+    <td><%= hypothec.dept_origin %></td>
+    <td><%= hypothec.interest_rate %></td>
+    <td><%= hypothec.notes %></td>
+    <td><%= hypothec.status %></td>
+    <td><%= link_to 'Show', hypothec %></td>
+    <td><%= link_to 'Edit', edit_hypothec_path(hypothec) %></td>
+    <td><%= link_to 'Destroy', hypothec, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hypothec', new_hypothec_path %>

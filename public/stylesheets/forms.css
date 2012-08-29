@@ -1,0 +1,140 @@
+/* All forms */
+
+fieldset { 
+	border: 1px solid #F97E1A;
+	margin-bottom: 10px;
+	border-radius: 5px 5px 5px 5px;
+	width:728px;
+	background-color: #F9F1EA;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+hr{
+	border: solid 1px #0784A8;
+	margin:20px 0px 5px 0px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Books  */
+.book label{ 
+	float: left;
+	width:9em;
+	margin: 7px 0px;
+}
+
+.book .field input { 
+	height: 26px;
+	width: 260px;
+	border: solid 1px #0784A8;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.book form{
+	margin-top: 20px;
+}
+
+.book .actions input{
+	width:125px;
+	height: 30px;
+	border-radius: 1px 1px 1px 1px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:100%;
+	float:right;
+}
+
+.book .actions input:hover{
+	background-color: #952802;
+	border: solid 1px #952802;
+}
+
+/* Main Register */
+
+.mainReg label{ 
+	float: left;
+	width:9em;
+	margin: 5px 0px;
+}
+
+.mainReg .field input{ 
+
+}
+
+.mainReg .field2 input{ 
+	height: 26px;
+	width: 300px;
+	margin-bottom: 10px;
+	border: solid 1px #8496ba;
+	border-radius: 4px 4px 4px 4px;
+}
+
+
+.mainReg .field textarea { 
+	height: 60px;
+	width: 42.5em;
+	border: solid 1px #8496ba;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.mainReg .field select{ 
+	height: 26px;
+	width: 250px;
+	border: solid 1px #8496ba;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.mainReg form{
+	margin-top: 20px;
+}
+
+.mainReg .actions input{
+	width:140px;
+	height: 30px;
+	border-radius: 1px 1px 1px 1px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:100%;
+	float:right;
+}
+
+.mainReg .field a{
+	width:28px;
+	margin: -30px 0px;
+	padding: 0px 3px;
+	border-radius: 2px 2px 2px 2px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	position: absolute;
+	#border: solid 1px #FB5707;
+	font-size:18pt;
+	text-decoration:none;
+	text-align:center;
+	clear:left;
+}
+
+.mainReg .field .lnk{
+	margin-left:32.4em;
+}
+
+.mainReg .field a:hover, .mainReg .actions input:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+	padding: 0px 3px;
+}
+
+/* Proprietary*/
+.mainReg .field select{ 
+	height: 26px;
+	width: 120px;
+	border: solid 1px #8496ba;
+	border-radius: 4px 4px 4px 4px;
+	margin-bottom: 8px;
+}

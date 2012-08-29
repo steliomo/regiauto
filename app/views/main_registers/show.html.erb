@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Proprietary:</b>
+  <%= @main_register.proprietary.name %>
+</p>
+
+<p>
+  <b>Vehicle provenience:</b>
+  <%= @main_register.vehicle_provenience %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @main_register.vehicle.nr_plate %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @main_register.status %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @main_register.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_main_register_path(@main_register) %> |
+<%= link_to 'Back', main_registers_path %>

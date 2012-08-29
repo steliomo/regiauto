@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  proprietary: 
+  register_dute: MyString
+  value: 1.5
+  vehicle: 
+  notes: MyText
+  status: MyString
+
+two:
+  name: MyString
+  proprietary: 
+  register_dute: MyString
+  value: 1.5
+  vehicle: 
+  notes: MyText
+  status: MyString

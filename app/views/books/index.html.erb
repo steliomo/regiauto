@@ -1,0 +1,24 @@
+<h1>Listing books</h1>
+
+<div id="form">	
+</div>
+
+<table id="books">
+  <tr>
+    <th>Proprietary</th>
+    <th>Vehicle</th>
+	<th>Register name</th>
+    <th>Register number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <%= render book %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book', new_book_path, :remote => true %>

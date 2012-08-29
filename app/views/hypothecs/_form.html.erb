@@ -1,0 +1,61 @@
+<%= form_for(@hypothec) do |f| %>
+  <% if @hypothec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hypothec.errors.count, "error") %> prohibited this hypothec from being saved:</h2>
+
+      <ul>
+      <% @hypothec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :proprietary_id %><br />
+    <%= f.text_field :proprietary_id %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant %><br />
+    <%= f.text_field :applicant %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_document %><br />
+    <%= f.text_field :contract_document %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_id %><br />
+    <%= f.text_field :vehicle_id %>
+  </div>	
+  <div class="field">
+    <%= f.label :outsanding %><br />
+    <%= f.text_field :outsanding %>
+  </div>
+  <div class="field">
+    <%= f.label :dept_origin %><br />
+    <%= f.text_field :dept_origin %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_rate %><br />
+    <%= f.text_field :interest_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module MainRegistersHelper
+end

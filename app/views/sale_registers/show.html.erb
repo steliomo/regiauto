@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sale_register.name %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @sale_register.customer.name %>
+</p>
+
+<p>
+  <b>Data buy:</b>
+  <%= @sale_register.buy_date %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @sale_register.value %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @sale_register.vehicle.mark %>
+</p>
+
+<p>
+  <b>Seller:</b>
+  <%= @sale_register.seller.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_register_path(@sale_register) %> |
+<%= link_to 'Back', sale_registers_path %>

@@ -1,0 +1,51 @@
+<div class="mainReg">
+<%=field_set_tag do %>
+<%= form_for(@main_register) do |f| %>
+  <% if @main_register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@main_register.errors.count, "error") %> prohibited this main_register from being saved:</h2>
+
+      <ul>
+      <% @main_register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field" id="pty">
+    <%= f.label :proprietary %>
+	<%= f.text_field :Proprietary_id %>
+ 	<div class="lnk">
+		<%= link_to "+", new_proprietary_path, :remote => true %>
+	</div>
+  </div>
+ 
+  <div class="field2">
+  	<%= f.label :name %>
+	<%= f.text_field :name%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :vehicle_provenience %>
+    <%= f.select :vehicle_provenience, MainRegister::PROVENIENCE, :prompt => "Select ..."  %>
+  </div>
+  <div class="field" id="vhc">
+    <%= f.label :vehicle %>
+    <%= f.text_field :Vehicle_id %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.select :status, MainRegister::STATUS, :prompt => "Select ..."  %>
+  </div>
+  <hr/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<% end %>
+</div>

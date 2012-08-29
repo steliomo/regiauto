@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Proprietary nuit:</b>
+  <%= @book.proprietary.nuit %>
+</p>
+<p>
+  <b>Proprietary:</b>
+  <%= @book.proprietary.name %>
+</p>
+<p>
+  <b>Vehicle mark:</b>
+  <%= @book.vehicle.mark %>
+</p>
+<p>
+  <b>Vehicle model:</b>
+  <%= @book.vehicle.model %>
+</p>
+
+<p>
+	 <b>Register number:</b>
+	 <%= @book.register_number %>
+</p>
+<p>
+	<b>Register name</b>
+	<%= @book.register_name %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

@@ -1,0 +1,35 @@
+<h1>Listing main_registers</h1>
+
+<table>
+  <tr>
+	<th>Process Number</th>
+	<th>Process Name</th>
+    <th>Proprietary</th>
+    <th>Vehicle provenience</th>
+    <th>Vehicle</th>
+    <th>Status</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @main_registers.each do |main_register| %>
+  <tr>
+	<td><%= main_register.id %></td>
+	<td><%= main_register.name %></td>
+    <td><%= main_register.proprietary.name %></td>
+    <td><%= main_register.vehicle_provenience %></td>
+    <td><%= main_register.vehicle.nr_plate %></td>
+    <td><%= main_register.status %></td>
+    <td><%= main_register.notes %></td>
+    <td><%= link_to 'Show', main_register %></td>
+    <td><%= link_to 'Edit', edit_main_register_path(main_register) %></td>
+    <td><%= link_to 'Destroy', main_register, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Main register', new_main_register_path %>

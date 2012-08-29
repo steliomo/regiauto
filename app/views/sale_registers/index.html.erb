@@ -1,0 +1,37 @@
+<h1>Listing sale_registers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Customer</th>
+    <th>Buy date</th>
+    <th>Value</th>
+    <th>Vehicle</th>
+    <th>Seller</th>
+	<th>Notes</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sale_registers.each do |sale_register| %>
+  <tr>
+    <td><%= sale_register.name %></td>
+    <td><%= sale_register.customer.name %></td>
+    <td><%= sale_register.buy_date	 %></td>
+    <td><%= sale_register.value %></td>
+    <td><%= sale_register.vehicle.nr_plate %></td>
+    <td><%= sale_register.seller.name %></td>
+	<td><%= sale_register.notes %></td>
+    <td><%= sale_register.status %></td>
+    <td><%= link_to 'Show', sale_register %></td>
+    <td><%= link_to 'Edit', edit_sale_register_path(sale_register) %></td>
+    <td><%= link_to 'Destroy', sale_register, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale register', new_sale_register_path %>

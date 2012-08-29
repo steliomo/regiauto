@@ -1,0 +1,2 @@
+module HypothecsHelper
+end

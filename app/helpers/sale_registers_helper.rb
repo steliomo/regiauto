@@ -1,0 +1,2 @@
+module SaleRegistersHelper
+end
