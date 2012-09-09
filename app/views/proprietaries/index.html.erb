@@ -19,7 +19,7 @@
 		<td><%= proprietary.occupation %></td>
 		<td><%= proprietary.address %></td>
 		<td><%= link_to "Show", proprietary_path(proprietary) %></td>
-		<td><%= link_to "Edit", proprietary_path(proprietary) %></td>
+		<td><%= link_to "Edit", edit_proprietary_path(proprietary) %></td>
 		<td><%= link_to "Delete", proprietary, :confirm => "Are sure", :method => :delete  %></td>
 	</tr>
   <% end %>	

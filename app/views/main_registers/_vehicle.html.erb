@@ -1,0 +1,76 @@
+<%= form_for (@vehicle) do |f|  %>
+	<% if @vehicle.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+	      <ul>
+	      <% @vehicle.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	<% end %>
+	<div class="field">
+		<%= f.label :name, "Number plate" %></br>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :mark %></br>
+		<%= f.text_field :mark %>
+	</div>
+	<div class="field">
+		<%= f.label :model %></br>
+		<%= f.text_field :model %>
+	</div>
+	<div class="field">
+		<%= f.label :frame_number %></br>
+		<%= f.text_field :frame_number %>
+	</div>
+	<div class="field">
+		<%= f.label :engine_number %></br>
+		<%= f.text_field :engine_number %>
+	</div>
+	<div class="field">
+		<%= f.label :cylinders %></br>
+		<%= f.text_field :cylinders %>
+	</div>
+	<div class="field">
+		<%= f.label :cylinders_cc, 'Cylinder Size' %></br>
+		<%= f.text_field :cylinders_cc %>
+	</div>
+	<div class="field">
+		<%= f.label :petrol %></br>
+		<%= f.text_field :petrol %>
+	</div>
+	<div class="field">
+		<%= f.label :transmission %></br>
+		<%= f.text_field :transmission %>
+	</div>
+	<div class="field">
+		<%= f.label :pneumatic_measures %></br>
+		<%= f.text_field :pneumatic_measures %>
+	</div>
+	<div class="field">
+		<%= f.label :gross_weight %></br>
+		<%= f.text_field :gross_weight %>
+	</div>
+	<div class="field">
+		<%= f.label :tare %></br>
+		<%= f.text_field :tare %>
+	</div>
+	<div class="field">
+		<%= f.label :stocking %></br>
+		<%= f.text_field :stocking %>
+	</div>
+	<div class="field">
+		<%= f.label :color %></br>
+		<%= f.text_field :color %>
+	</div>
+	<div class="field">
+		<%= f.label :service %></br>
+		<%= f.text_field :service %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

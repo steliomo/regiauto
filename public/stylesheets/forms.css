@@ -4,7 +4,7 @@ fieldset {
 	border: 1px solid #F97E1A;
 	margin-bottom: 10px;
 	border-radius: 5px 5px 5px 5px;
-	width:728px;
+	width:722px;
 	background-color: #F9F1EA;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
@@ -18,7 +18,7 @@ hr{
 /* Books  */
 .book label{ 
 	float: left;
-	width:9em;
+	width:24%;
 	margin: 7px 0px;
 }
 
@@ -26,7 +26,7 @@ hr{
 	height: 26px;
 	width: 260px;
 	border: solid 1px #0784A8;
-	border-radius: 4px 4px 4px 4px;
+	#border-radius: 4px 4px 4px 4px;
 }
 
 .book form{
@@ -37,7 +37,6 @@ hr{
 	width:125px;
 	height: 30px;
 	border-radius: 1px 1px 1px 1px;
-	font-family:"Times New Roman";
 	font-weight:bold;
 	background-color: #FB5707;
 	color: #FFFFFF;
@@ -55,35 +54,29 @@ hr{
 
 .mainReg label{ 
 	float: left;
-	width:9em;
-	margin: 5px 0px;
-}
-
-.mainReg .field input{ 
-
+	width:24%;
+	margin: 4px 0px;
 }
 
 .mainReg .field2 input{ 
-	height: 26px;
+	height: 24px;
 	width: 300px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	border: solid 1px #8496ba;
-	border-radius: 4px 4px 4px 4px;
 }
 
 
 .mainReg .field textarea { 
 	height: 60px;
-	width: 42.5em;
+	width: 410px;
 	border: solid 1px #8496ba;
-	border-radius: 4px 4px 4px 4px;
+	margin-bottom: -6px;
 }
 
 .mainReg .field select{ 
-	height: 26px;
-	width: 250px;
+	height: 28px;
+	width: 200px;
 	border: solid 1px #8496ba;
-	border-radius: 4px 4px 4px 4px;
 }
 
 .mainReg form{
@@ -93,48 +86,97 @@ hr{
 .mainReg .actions input{
 	width:140px;
 	height: 30px;
-	border-radius: 1px 1px 1px 1px;
-	font-family:"Times New Roman";
 	font-weight:bold;
 	background-color: #FB5707;
 	color: #FFFFFF;
 	border: solid 1px #FB5707;
-	font-size:100%;
+	font-size:9pt;
 	float:right;
 }
 
 .mainReg .field a{
-	width:28px;
-	margin: -30px 0px;
-	padding: 0px 3px;
-	border-radius: 2px 2px 2px 2px;
+	width:30px;	
+	height: 26px;
+	margin:5px 0px;
+	#border-radius: 2px 2px 2px 2px;
 	font-weight:bold;
 	background-color: #FB5707;
 	color: #FFFFFF;
 	position: absolute;
-	#border: solid 1px #FB5707;
-	font-size:18pt;
+	border: solid 1px #FB5707;
+	font: 12pt/170% Verdana;
 	text-decoration:none;
 	text-align:center;
-	clear:left;
+	clear:none;
 }
 
 .mainReg .field .lnk{
-	margin-left:32.4em;
+	margin-left: 478px;
+	margin-top:-36px;
+	position:absolute;
 }
 
-.mainReg .field a:hover, .mainReg .actions input:hover{
+.mainReg .actions input:hover{
 	background-color: #952802;
 	border: solid 1px #FFF;
 	border-radius: 3px 3px 3px 3px;
 	padding: 0px 3px;
 }
 
-/* Proprietary*/
-.mainReg .field select{ 
-	height: 26px;
-	width: 120px;
-	border: solid 1px #8496ba;
-	border-radius: 4px 4px 4px 4px;
-	margin-bottom: 8px;
+.mainReg .field a:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	#border-radius: 3px 3px 3px 3px;
+	#padding: 0px 12px;
 }
+
+/* Proprietary*/
+
+.proprietary label{ 
+	float: left;
+	width: 24%;
+	margin: 4px 0px;
+}
+
+.proprietary .field textarea { 
+	height: 60px;
+	width: 410px;
+	border: solid 1px #8496ba;
+	margin-bottom: -10px;
+}
+
+.proprietary .field input{ 
+	height: 24px;
+	width: 300px;
+	margin-bottom: -5px;
+	border: solid 1px #8496ba;
+}
+
+.proprietary form{
+	margin-top: 20px;
+}
+
+.proprietary .actions input{
+	width:140px;
+	height: 30px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:9pt;
+	float:right;
+}
+
+.proprietary .field select{ 
+	height: 26px;
+	#width: 100px;
+	border: solid 1px #8496ba;
+}
+
+.proprietary .actions input:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+	padding: 0px 3px;
+}
+

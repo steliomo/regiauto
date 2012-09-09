@@ -1,0 +1,81 @@
+<div class="mainReg">
+<%=field_set_tag do %>
+<%= form_for (@vehicle, :remote => true ) do |f|  %>
+	<% if @vehicle.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+	      <ul>
+	      <% @vehicle.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	<% end %>
+	<div class="field2">
+		<%= f.label :name, "Number plate" %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field2">
+		<%= f.label :mark %>
+		<%= f.text_field :mark %>
+	</div>
+	<div class="field2">
+		<%= f.label :model %>
+		<%= f.text_field :model %>
+	</div>
+	<div class="field2">
+		<%= f.label :frame_number %>
+		<%= f.text_field :frame_number %>
+	</div>
+	<div class="field2">
+		<%= f.label :engine_number %>
+		<%= f.text_field :engine_number %>
+	</div>
+	<div class="field2">
+		<%= f.label :cylinders %>
+		<%= f.text_field :cylinders %>
+	</div>
+	<div class="field2">
+		<%= f.label :cylinders_cc, 'Cylinder Size' %>
+		<%= f.text_field :cylinders_cc %>
+	</div>
+	<div class="field2">
+		<%= f.label :petrol %>
+		<%= f.text_field :petrol %>
+	</div>
+	<div class="field2">
+		<%= f.label :transmission %>
+		<%= f.text_field :transmission %>
+	</div>
+	<div class="field2">
+		<%= f.label :pneumatic_measures %>
+		<%= f.text_field :pneumatic_measures %>
+	</div>
+	<div class="field2">
+		<%= f.label :gross_weight %>
+		<%= f.text_field :gross_weight %>
+	</div>
+	<div class="field2">
+		<%= f.label :tare %>
+		<%= f.text_field :tare %>
+	</div>
+	<div class="field2">
+		<%= f.label :stocking %>
+		<%= f.text_field :stocking %>
+	</div>
+	<div class="field2">
+		<%= f.label :color %>
+		<%= f.text_field :color %>
+	</div>
+	<div class="field2">
+		<%= f.label :service %>
+		<%= f.text_field :service %>
+	</div>
+	<hr/>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+<% end %>
+</div>

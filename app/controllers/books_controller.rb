@@ -52,6 +52,7 @@ class BooksController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @book.errors, :status => :unprocessable_entity }
+        format.js
       end
     end
   end

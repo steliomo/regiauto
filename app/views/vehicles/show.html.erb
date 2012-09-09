@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number Plate:</b>
+  <%= @vehicle.name %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @vehicle.mark %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @vehicle.model %>
+</p>
+
+<p>
+  <b>Frame Number:</b>
+  <%= @vehicle.frame_number %>
+</p>
+
+<p>
+  <b>Engine Number:</b>
+  <%= @vehicle.engine_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

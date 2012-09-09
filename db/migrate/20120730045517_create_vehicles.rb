@@ -1,7 +1,7 @@
 class CreateVehicles < ActiveRecord::Migration
   def self.up
     create_table :vehicles do |t|
-      t.string :nr_plate, :null => false, :unique => true, :limit => 30
+      t.string :name, :null => false, :unique => true, :limit => 30 #nr_plate
       t.string :mark, :null => false, :limit => 50  
       t.string :model, :null => false, :limit => 50
       t.string :frame_number, :null => false, :limit => 50

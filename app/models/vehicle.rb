@@ -7,9 +7,9 @@ class Vehicle < ActiveRecord::Base
   has_one :book
   has_one :proprietary, :through => :book 
   
-  validates_presence_of :nr_plate, :mark, :model, :frame_number, :engine_number, :cylinders, :cylinders_cc, :petrol,
+  validates_presence_of :name, :mark, :model, :frame_number, :engine_number, :cylinders, :cylinders_cc, :petrol,
                         :transmission, :pneumatic_measures, :gross_weight, :tare, :stocking, :color, :service
                         
-  validates_uniqueness_of :nr_plate
+  validates_uniqueness_of :name
   
 end

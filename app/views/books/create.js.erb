@@ -1,3 +1,7 @@
-$('#books').append("<%= escape_javascript(render(@book))%>");
-$('#new_book')[0].reset();
-$('#form').fadeOut();
+<% if @book.valid? %>
+	$('#books').append("<%= escape_javascript(render(@book))%>");
+	$('#new_book')[0].reset();
+	$('.book').fadeOut();
+<% else %>
+	$('.book').replaceWith("<%= escape_javascript(render(:partial =>'form'))%>");
+<% end %>

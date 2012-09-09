@@ -1,4 +1,6 @@
-<% form_for @proprietary do |f| %>
+<div class="proprietary">
+<%=field_set_tag do %>
+<%= form_for (@proprietary, :remote => true) do |f| %>
 <% if @proprietary.errors.any? %>
   <div id="error_explanation">
   	<h2><%= pluralize(@proprietary.errors.count, "error")%> prohibited this proprietary for being saved:</h2>
@@ -10,24 +12,30 @@
   </div>
 <%end%>
 
- <div class="field2">
+ <div class="field">
    <%= f.label :nuit %>
    <%= f.text_field :nuit %>
  </div>
- <div class="field2">
+ <div class="field">
    <%= f.label :name %>
    <%= f.text_field :name %>
  </div>
- <div class="date">
+ <div class="field">
    <%= f.label :birth_day %>
    <%= f.date_select :birth_day, :order => [:day, :month ,:year] %>
  </div>
- <div class="field2">
+ <div class="field">
    <%= f.label :occupation %>
-   <%= f.text_field :address %>
+   <%= f.text_field :occupation %>
  </div>
  <div class="field">
    <%= f.label :address %>
    <%= f.text_area :address %>
  </div>
+ <hr/>
+ <div class="actions">
+    <%= f.submit "Add Proprietary" %>
+  </div>
 <% end %>
+<% end %>
+</div>

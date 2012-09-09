@@ -7,13 +7,14 @@ $(function() {
     theme: "facebook"
   });
 });
+
+
 //vehicles
 $(function() {
-  $("#main_register_Vehicle_id").tokenInput("/proprietaries.json", {
+  $("#main_register_Vehicle_id").tokenInput("/vehicles.json", {
     crossDomain: false,
-    prePopulate: $("#main_register_Proprietary_id").data("pre"),
+    prePopulate: $("#main_register_Vehicle_id").data("pre"),
     theme: "facebook"
   });
 });
-
 

@@ -19,6 +19,7 @@ class ProprietariesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @proprietary }
+      format.js
     end
   end
 
@@ -42,15 +43,17 @@ class ProprietariesController < ApplicationController
   # POST /proprietary
   # POST /proprietary.xml
   def create         
-    @proprietary= Proprietary.new(params[:proprietary])
+    @proprietary = Proprietary.new(params[:proprietary])
 
     respond_to do |format|
       if @proprietary.save
         format.html { redirect_to(@proprietary, :notice => 'Proprietary was successfully created.') }
         format.xml  { render :xml => @proprietary, :status => :created, :location => @proprietary}
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @proprietary.errors, :status => :unprocessable_entity }
+        format.js
       end
     end
   end
