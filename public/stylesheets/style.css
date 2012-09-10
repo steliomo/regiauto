@@ -1,10 +1,6 @@
-body, html{
-	margin: 0;
-	padding:0;
-}
-
-body,ul, li, a, table, label, p, input, tr, td, span, textarea{
- 	font:10pt/170% Georgia, "Times New Roman", Times, serif;
+body,ul, li, a, table, label, p, tr, td, span, textarea{
+ 	font:8pt/170% Georgia, "Times New Roman", Times, serif;
+	#text-shadow: #000 0 0 0;
 }
 
 #head {
@@ -32,10 +28,10 @@ body,ul, li, a, table, label, p, input, tr, td, span, textarea{
 	margin: 3em auto 0em auto;
 }
 #navigation{
-	width:250px;
+	width:200px;
 	position:absolute;
-	margin: -48px;
-	padding-left: 4px;
+	margin: -28px;
+	padding-left: 22px;
 	padding-top: 4px;
 	clear: none;
 }
@@ -65,10 +61,10 @@ body,ul, li, a, table, label, p, input, tr, td, span, textarea{
 	text-decoration: none;
 	box-shadow: 0 2px 1px rgba(10, 0.3, 0.3, 0.3);
 	font-weight:bold;
+	overflow: hidden;
 }
 
 #content{
-	margin-left:16.5em;
+	margin-left:18.5em;
 	margin-right:2em;
-	#font-family: Georgia, "Times New Roman", Times, serif;
 }

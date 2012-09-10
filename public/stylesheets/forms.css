@@ -1,17 +1,17 @@
 /* All forms */
 
-fieldset { 
+.mainReg fieldset { 
 	border: 1px solid #F97E1A;
 	margin-bottom: 10px;
 	border-radius: 5px 5px 5px 5px;
-	width:722px;
+	width:750px;
 	background-color: #F9F1EA;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-hr{
+.mainReg hr{
 	border: solid 1px #0784A8;
-	margin:20px 0px 5px 0px;
+	margin: 5px 5px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,15 +52,25 @@ hr{
 
 /* Main Register */
 
-.mainReg label{ 
+.mainReg #part1 label, .mainReg #part2 label{ 
 	float: left;
-	width:24%;
-	margin: 4px 0px;
+	width: 12%;
+	margin: 2px 5px;
+}
+
+.mainReg #part2 label{ 
+	float: left;
+	width: 120px;
+}
+.mainReg #part2{
+	position: absolute;
+	margin-left: 330px;
+	margin-top: -203px;
 }
 
 .mainReg .field2 input{ 
-	height: 24px;
-	width: 300px;
+	height: 20px;
+	width: 200px;
 	margin-bottom: 5px;
 	border: solid 1px #8496ba;
 }
@@ -92,6 +102,9 @@ hr{
 	border: solid 1px #FB5707;
 	font-size:9pt;
 	float:right;
+	font-family: verdana;
+	margin-bottom: 5px;
+	margin-right: 5px;
 }
 
 .mainReg .field a{
