@@ -1,39 +1,59 @@
 body,ul, li, a, table, label, p, tr, td, span, textarea{
- 	font:8pt/170% Georgia, "Times New Roman", Times, serif;
-	#text-shadow: #000 0 0 0;
+ 	font: 11px/1.5 "Lucida Grande", Georgia, "Times New Roman", Times, serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
 }
 
 #head {
   	height: 70px;
-	width:950px;
+	width:900px;
 	background-color: #0784A8;
 	border-bottom: 2px solid #FB5707;
-	text-align: right;
-	padding-right: 20px;
-	margin:3em auto 0em auto;
-	border-radius: 0px 0px 5px 5px;
-	border-top:5px solid #FB5707;
-	clear:none;
+	margin: 20px auto 10px auto;
+	border-radius: 0px 25px 0px 25px;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+	border-top: 5px solid #FB5707;
 }
 
 #head label{
 	float: left;
 	color: #FFF;
 	font-size: 18pt;
-	margin: 0px 10px;
+	margin: 15px 10px;
+	padding: 0;
 	font-weight: bold;
 }
-#conteiner{
-	width:964px;
-	margin: 3em auto 0em auto;
+
+#title {
+  	height: 25px;
+	width:705px;
+	background-color: #0784A8;
+	border-left: 2px solid #FB5707;
+	border-right: 2px solid #FB5707;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
+
+#title h1 {
+  	padding: 2px 0 5px 5px;
+	font-size: 14px;
+	color: #FFF;
+}
+
+
+#conteiner{
+	width:903px;
+	margin: auto;
+
+}
+
 #navigation{
-	width:200px;
+	width:180px;
 	position:absolute;
-	margin: -28px;
-	padding-left: 22px;
-	padding-top: 4px;
-	clear: none;
+	margin: -2px 0px;
 }
 
 #navigation ul{
@@ -50,14 +70,13 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 }
 
 #navigation li a:link, #navigation li a:visited  {
- 	#font-size: 10pt;
 	display: block;
 	padding: 0.4em 0 0.4em 0.5em;
-	border-left: 15px solid #FB5707;
-	border-right: 1px solid #FB5707;
+	border-left: 10px solid #FB5707;
+	border-right: 2px solid #FB5707;
 	background-color: #0784A8;
 	color: #FFFFFF;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 0px 10px 0px 10px;
 	text-decoration: none;
 	box-shadow: 0 2px 1px rgba(10, 0.3, 0.3, 0.3);
 	font-weight:bold;
@@ -65,6 +84,5 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 }
 
 #content{
-	margin-left:18.5em;
-	margin-right:2em;
+	margin-left: 192px;
 }

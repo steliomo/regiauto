@@ -12,4 +12,7 @@ class Vehicle < ActiveRecord::Base
                         
   validates_uniqueness_of :name
   
+  PETROL = %w(Gasolina Diesel Gas)
+  TRANS = %w(Automatico Manual)
+  
 end

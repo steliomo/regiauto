@@ -1,4 +1,4 @@
-<div class="mainReg">
+<div class="vehicle">
 <%=field_set_tag do %>
 <%= form_for (@vehicle, :remote => true ) do |f|  %>
 	<% if @vehicle.errors.any? %>
@@ -15,7 +15,7 @@
 <div id="part1">	
 	<div class="field2">
 		<%= f.label :name, "Number plate" %>
-		<%= f.text_field :name %>
+		<%= f.text_field :name, :style => "width: 120px;" %>
 	</div>
 	<div class="field2">
 		<%= f.label :mark %>
@@ -35,7 +35,7 @@
 	</div>
 	<div class="field2">
 		<%= f.label :cylinders %>
-		<%= f.text_field :cylinders %>
+		<%= f.text_field :cylinders, :style => "width: 50px;" %>
 	</div>
 	<div class="field2">
 		<%= f.label :cylinders_cc, 'Cylinder Size' %>
@@ -43,13 +43,13 @@
 	</div>
 	<div class="field2">
 		<%= f.label :petrol %>
-		<%= f.text_field :petrol %>
+		<%= f.select :petrol, Vehicle::PETROL, :prompt => "Select"  %>
 	</div>
 </div>
 <div id="part2">	
 	<div class="field2">
 		<%= f.label :transmission %>
-		<%= f.text_field :transmission %>
+		<%= f.select :transmission, Vehicle::TRANS, :prompt => "Select"  %>
 	</div>
 	<div class="field2">
 		<%= f.label :pneumatic_measures %>
@@ -65,7 +65,7 @@
 	</div>
 	<div class="field2">
 		<%= f.label :stocking %>
-		<%= f.text_field :stocking %>
+		<%= f.text_field :stocking, :style => "width: 50px;" %>
 	</div>
 	<div class="field2">
 		<%= f.label :color %>

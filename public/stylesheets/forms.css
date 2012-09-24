@@ -1,15 +1,15 @@
 /* All forms */
 
-.mainReg fieldset { 
+.mainReg fieldset, .vehicle fieldset, .proprietary fieldset  { 
 	border: 1px solid #F97E1A;
-	margin-bottom: 10px;
-	border-radius: 5px 5px 5px 5px;
-	width:750px;
+	margin: 13px 0px 10px 0px;
+	border-radius: 0px 0px 0px 25px;
+	width:707px;
 	background-color: #F9F1EA;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-.mainReg hr{
+.mainReg hr, .vehicle hr, .proprietary hr{
 	border: solid 1px #0784A8;
 	margin: 5px 5px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
@@ -52,41 +52,39 @@
 
 /* Main Register */
 
-.mainReg #part1 label, .mainReg #part2 label{ 
-	float: left;
-	width: 12%;
-	margin: 2px 5px;
-}
-
-.mainReg #part2 label{ 
+.mainReg label{ 
 	float: left;
 	width: 120px;
-}
-.mainReg #part2{
-	position: absolute;
-	margin-left: 330px;
-	margin-top: -203px;
+	margin: 4px 15px;
 }
 
 .mainReg .field2 input{ 
 	height: 20px;
-	width: 200px;
+	width: 180px;
 	margin-bottom: 5px;
 	border: solid 1px #8496ba;
 }
 
+.mainReg .field2 input{ 
+	height: 24px;
+	width: 300px;
+	margin-top: -5px;
+	border: solid 1px #8496ba;
+}
 
 .mainReg .field textarea { 
 	height: 60px;
-	width: 410px;
+	width: 412px;
 	border: solid 1px #8496ba;
-	margin-bottom: -6px;
+	margin-top: -6px;
+	margin-bottom: -8px;
 }
 
 .mainReg .field select{ 
 	height: 28px;
 	width: 200px;
 	border: solid 1px #8496ba;
+	margin-bottom: -5px;
 }
 
 .mainReg form{
@@ -102,31 +100,9 @@
 	border: solid 1px #FB5707;
 	font-size:9pt;
 	float:right;
-	font-family: verdana;
+	font-family: Georgia;
 	margin-bottom: 5px;
 	margin-right: 5px;
-}
-
-.mainReg .field a{
-	width:30px;	
-	height: 26px;
-	margin:5px 0px;
-	#border-radius: 2px 2px 2px 2px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	position: absolute;
-	border: solid 1px #FB5707;
-	font: 12pt/170% Verdana;
-	text-decoration:none;
-	text-align:center;
-	clear:none;
-}
-
-.mainReg .field .lnk{
-	margin-left: 478px;
-	margin-top:-36px;
-	position:absolute;
 }
 
 .mainReg .actions input:hover{
@@ -136,19 +112,38 @@
 	padding: 0px 3px;
 }
 
-.mainReg .field a:hover{
-	background-color: #952802;
-	border: solid 1px #FFF;
-	#border-radius: 3px 3px 3px 3px;
-	#padding: 0px 12px;
+#init{
+	margin: 15px 20px;
+	margin-bottom:-7px;
+}
+
+
+#init li {
+  	display: inline;
+	margin-left: -2px;
+}
+
+#init ul li a:hover {
+  	background-color: #f1b49f;
+	color: #000;
+}
+
+#init li a:link, #init li a:visited  {
+	padding: 5px 15px 8px 15px;
+	background-color: #e8ecee;
+	border-radius: 5px 5px 0px 0px;
+	border: 1px solid #F97E1A;
+	text-decoration: none;
+	font-weight:bold;
+	color: #000;
 }
 
 /* Proprietary*/
 
 .proprietary label{ 
 	float: left;
-	width: 24%;
-	margin: 4px 0px;
+	width: 100px;
+	margin: 4px 15px;
 }
 
 .proprietary .field textarea { 
@@ -178,11 +173,13 @@
 	border: solid 1px #FB5707;
 	font-size:9pt;
 	float:right;
+	font-family: Georgia;
+	margin-bottom: 5px;
+	margin-right: 5px;
 }
 
 .proprietary .field select{ 
 	height: 26px;
-	#width: 100px;
 	border: solid 1px #8496ba;
 }
 
@@ -193,3 +190,60 @@
 	padding: 0px 3px;
 }
 
+/* Vehicles */
+.vehicle #part1 label{ 
+	float: left;
+	width: 100px;
+	margin: 2px 15px;
+}
+
+.vehicle #part2 label{ 
+	float: left;
+	width: 130px;
+	margin: 2px 15px;
+}
+
+.vehicle #part2{
+	position: absolute;
+	margin-left: 330px;
+	margin-top: -189px;
+}
+
+.vehicle .field2 input{ 
+	height: 20px;
+	width: 180px;
+	margin-bottom: 5px;
+	border: solid 1px #8496ba;
+}
+
+.vehicle form{
+	margin-top: 20px;
+}
+
+.vehicle .actions input{
+	width:140px;
+	height: 30px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:9pt;
+	float:right;
+	font-family: Georgia;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.vehicle .field2 select{ 
+	height: 24px;
+	width: 183px;
+	border: solid 1px #8496ba;
+	margin-bottom: 5px;
+}
+
+.vehicle .actions input:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+	padding: 0px 3px;
+}

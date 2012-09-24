@@ -15,9 +15,6 @@
   <div class="field" id="pty">
     <%= f.label :proprietary %>
 	<%= f.text_field :Proprietary_id, "data-pre" => @main_register.proprietary.to_a.map(&:attributes).to_json  %>
- 	<div class="lnk">
-		<%= link_to "+", new_proprietary_path, :remote => true %>
-	</div>
   </div>
  
   <div class="field2">
@@ -32,9 +29,6 @@
   <div class="field">
     <%= f.label :vehicle %>
     <%= f.text_field :Vehicle_id, "data-pre" => @main_register.vehicle.to_a.map(&:attributes).to_json %>
-	<div class="lnk">
-		<%= link_to "+", new_vehicle_path, :remote => true %>
-	</div>
   </div>
   <div class="field">
     <%= f.label :notes %>

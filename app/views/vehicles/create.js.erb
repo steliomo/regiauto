@@ -1,7 +1,7 @@
 <% if @vehicle.valid? %>
 	$('#pty h2, #pty form').fadeOut();
 <% else %>
-	$('#pty').html('<h2> New Vehicle </h2>');
+	$('#pty').html('');
 	$("#pty").append("<%= escape_javascript(render(:partial =>'form'))%>");
 <% end %>
 

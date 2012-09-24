@@ -1,7 +1,13 @@
-<div id="pty">
+<div id="title"><h1>New main_register</h1></div>
+<div id="init">
+	<ul>
+		<li><%= link_to "Register", new_main_register_path %></li>
+		<li><%= link_to "Proprietary", new_proprietary_path, :remote => true %></li>
+		<li><%= link_to "Vehicle details", new_vehicle_path, :remote => true %></li>
+	</ul>
+	
 </div>
-<h1>New main_register</h1>
 
-<%= render 'form' %>
+<div id="pty"><%= render 'form' %></div>
 
 <%= link_to 'Back', main_registers_path %>
