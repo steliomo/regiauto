@@ -10,13 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120813033341) do
+ActiveRecord::Schema.define(:version => 20121010224857) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
     t.integer  "vehicle_id"
-    t.string   "register_name",   :limit => 50, :null => false
-    t.integer  "register_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -95,7 +93,7 @@ ActiveRecord::Schema.define(:version => 20120813033341) do
   end
 
   create_table "vehicles", :force => true do |t|
-    t.string   "nr_plate",           :limit => 30,  :null => false
+    t.string   "name",               :limit => 30,  :null => false
     t.string   "mark",               :limit => 50,  :null => false
     t.string   "model",              :limit => 50,  :null => false
     t.string   "frame_number",       :limit => 50,  :null => false
