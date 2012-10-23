@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010224857) do
+ActiveRecord::Schema.define(:version => 20121011213357) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121010224857) do
   end
 
   create_table "hypothecs", :force => true do |t|
-    t.string   "name",              :limit => 50
+    t.string   "type",              :limit => 50
     t.integer  "proprietary_id",                  :null => false
     t.string   "applicant",         :limit => 50
     t.string   "contract_document", :limit => 70
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20121010224857) do
   end
 
   create_table "main_registers", :force => true do |t|
-    t.string   "name",                :limit => 50, :null => false
+    t.string   "type",                :limit => 50, :null => false
     t.integer  "Proprietary_id"
     t.string   "vehicle_provenience"
     t.integer  "Vehicle_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20121010224857) do
   end
 
   create_table "proprietary_registers", :force => true do |t|
-    t.string   "name",                         :null => false
+    t.string   "type",                         :null => false
     t.integer  "proprietary_id",               :null => false
     t.date     "aquire_date"
     t.string   "register_dute",  :limit => 50
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(:version => 20121010224857) do
   end
 
   create_table "sale_registers", :force => true do |t|
-    t.string   "name",        :limit => 50, :null => false
+    t.string   "type",        :limit => 50, :null => false
     t.integer  "customer_id",               :null => false
     t.date     "buy_date"
     t.float    "value"
