@@ -11,7 +11,7 @@ class Phone
     @number == value.number 
   end
   
-  def to_s
+  def to_s  
     @number ? "+ #{@country_code} #{@prefix_code} #{@number}" : "NA"
   end
   

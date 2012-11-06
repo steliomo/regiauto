@@ -21,7 +21,7 @@ class BooksController < ApplicationController
       format.xml  { render :xml => @book }
     end
   end
-
+  
   # GET /books/new
   # GET /books/new.xml
   def new
