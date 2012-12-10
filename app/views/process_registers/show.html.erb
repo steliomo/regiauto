@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Proprietary:</b>
+  <%= @process_register.proprietary %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @process_register.vehicle %>
+</p>
+
+<p>
+  <b>Register type:</b>
+  <%= @process_register.register_type %>
+</p>
+
+<p>
+  <b>Process status:</b>
+  <%= @process_register.process_status %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @process_register.notes %>
+</p>
+
+<p>
+  <b>Documents:</b>
+  <%= @process_register.documents %>
+</p>
+
+
+<%= link_to 'Edit', edit_process_register_path(@process_register) %> |
+<%= link_to 'Back', process_registers_path %>

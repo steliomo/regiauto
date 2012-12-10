@@ -40,6 +40,7 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     cgi_multipart_eof_fix (2.5.0)
+    cocoon (1.1.1)
     daemons (1.1.8)
     devise (1.5.3)
       bcrypt-ruby (~> 3.0)
@@ -136,6 +137,7 @@ PLATFORMS
 DEPENDENCIES
   cancan
   capistrano
+  cocoon
   devise
   hirb
   jquery-rails

@@ -1,12 +1,11 @@
 class Proprietary < ActiveRecord::Base
   
-  has_many :books 
-  has_many :main_registers
-  has_many :sale_registers, :foreign_key => "customer_id" 
-  has_many :proprietary_registers
-  has_many :vehicles, :through => :books
-  has_many :contacts, :class_name => "Phone",  :foreign_key => "proprietary_id"
+  has_many :process_registers, :dependent => :destroy 
+  has_many :contacts, :class_name => "Phone",  :foreign_key => "proprietary_id", :dependent => :destroy 
   
-  validates_presence_of :nuit, :name, :address
-    
+  validates_presence_of :nuit, :name, :address  
+  validates_associated :contacts
+  
+  accepts_nested_attributes_for :contacts, :allow_destroy => true
+  
 end

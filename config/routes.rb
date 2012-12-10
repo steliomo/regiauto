@@ -1,5 +1,6 @@
 Regiauto::Application.routes.draw do
   
+  resources :process_registers
   resources :vehicles
   resources :hypothecs
   resources :proprietary_registers

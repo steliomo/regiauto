@@ -1,0 +1,59 @@
+<%= form_for(@process_register) do |f| %>
+  <% if @process_register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@process_register.errors.count, "error") %> prohibited this process_register from being saved:</h2>
+
+      <ul>
+      <% @process_register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<%= f.label :proprietary_id %>
+	<%= f.select :proprietary_id, Proprietary.all.collect{|p| [p.name, p.id]}, :prompt => "Select..." %>
+  </div>
+  <div class="field">
+	<%= f.fields_for :proprietary do |p| %>
+		<%= render 'proprietary', :f => p %>
+	<% end %>
+  </div>
+  <div class="filed"><%= link_to_add_association "Add Proprietary", f, :proprietary %></div>
+  <div class="field">
+	<%= f.label :vehicle_id %>
+	<%= f.select :vehicle_id, Vehicle.all.collect{|v| [v.name, v.id]}, :prompt => "Select..." %>
+  </div>
+  <div class="field">
+	<%= f.fields_for :vehicle do |v| %>
+		<%= render 'vehicle_fields', :f => v %>
+	<% end %>
+  </div>
+  <div class="filed"><%= link_to_add_association "Add Vehicle", f, :vehicle %></div>
+  <div class="field">
+    <%= f.label :register_type %><br />
+    <%= f.select :register_type, ProcessRegister::REGISTERTYPE, :prompt => "Select..." %>
+  </div>
+  <div class="field">
+    <%= f.label :process_status %><br />
+    <%= f.select :process_status, ProcessRegister::STATUS, :prompt => "Select..." %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :documents %><br />
+    <%= f.text_field :documents %>
+  </div>
+  <div class="field">
+	<%= f.fields_for :sale_register do |sr| %>
+		<%= render 'sale_register_fields', :f => sr %>
+	<% end %>
+  </div>
+    <%= link_to_add_fields "Add Sale Register", f, :sale_register %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

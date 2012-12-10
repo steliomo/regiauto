@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011213357) do
+ActiveRecord::Schema.define(:version => 20121205223505) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121011213357) do
   end
 
   create_table "hypothecs", :force => true do |t|
-    t.string   "type",              :limit => 50
+    t.string   "name",              :limit => 50
     t.integer  "proprietary_id",                  :null => false
     t.string   "applicant",         :limit => 50
     t.string   "contract_document", :limit => 70
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20121011213357) do
   end
 
   create_table "main_registers", :force => true do |t|
-    t.string   "type",                :limit => 50, :null => false
+    t.string   "name",                :limit => 50, :null => false
     t.integer  "Proprietary_id"
     t.string   "vehicle_provenience"
     t.integer  "Vehicle_id"
@@ -47,11 +47,21 @@ ActiveRecord::Schema.define(:version => 20121011213357) do
   end
 
   create_table "phones", :force => true do |t|
-    t.string   "phone_type",     :limit => 30, :null => false
     t.integer  "country_code"
     t.integer  "prefix_code",    :limit => 8
     t.integer  "number"
     t.integer  "proprietary_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "process_registers", :force => true do |t|
+    t.integer  "proprietary_id",               :null => false
+    t.integer  "vehicle_id",                   :null => false
+    t.string   "register_type",  :limit => 50
+    t.string   "process_status", :limit => 50
+    t.text     "notes"
+    t.string   "documents"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -67,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20121011213357) do
   end
 
   create_table "proprietary_registers", :force => true do |t|
-    t.string   "type",                         :null => false
+    t.string   "name",                         :null => false
     t.integer  "proprietary_id",               :null => false
     t.date     "aquire_date"
     t.string   "register_dute",  :limit => 50
@@ -80,14 +90,10 @@ ActiveRecord::Schema.define(:version => 20121011213357) do
   end
 
   create_table "sale_registers", :force => true do |t|
-    t.string   "type",        :limit => 50, :null => false
-    t.integer  "customer_id",               :null => false
+    t.integer  "process_register_id", :null => false
     t.date     "buy_date"
     t.float    "value"
-    t.integer  "vehicle_id",                :null => false
-    t.integer  "seller_id",                 :null => false
-    t.text     "notes"
-    t.string   "status",      :limit => 30, :null => false
+    t.integer  "seller_id",           :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

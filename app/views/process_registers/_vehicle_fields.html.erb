@@ -1,0 +1,64 @@
+<div class="vehicle">
+<div id="part1">	
+	<div class="field2">
+		<%= f.label :name, "Number plate" %>
+		<%= f.text_field :name, :style => "width: 120px;" %>
+	</div>
+	<div class="field2">
+		<%= f.label :mark %>
+		<%= f.text_field :mark %>
+	</div>
+	<div class="field2">
+		<%= f.label :model %>
+		<%= f.text_field :model %>
+	</div>
+	<div class="field2">
+		<%= f.label :frame_number %>
+		<%= f.text_field :frame_number %>
+	</div>
+	<div class="field2">
+		<%= f.label :engine_number %>
+		<%= f.text_field :engine_number %>
+	</div>
+	<div class="field2">
+		<%= f.label :cylinders %>
+		<%= f.text_field :cylinders, :style => "width: 50px;" %>
+	</div>
+	<div class="field2">
+		<%= f.label :cylinders_cc, 'Cylinder Size' %>
+		<%= f.text_field :cylinders_cc %>
+	</div>
+	<div class="field2">
+		<%= f.label :petrol %>
+		<%= f.select :petrol, Vehicle::PETROL, :prompt => "Select"  %>
+	</div>
+</div>
+<div id="part2">	
+	<div class="field2">
+		<%= f.label :transmission %>
+		<%= f.select :transmission, Vehicle::TRANS, :prompt => "Select"  %>
+	</div>
+	<div class="field2">
+		<%= f.label :pneumatic_measures %>
+		<%= f.text_field :pneumatic_measures %>
+	</div>
+	<div class="field2">
+		<%= f.label :gross_weight %>
+		<%= f.text_field :gross_weight %>
+	</div>
+	<div class="field2">
+		<%= f.label :tare %>
+		<%= f.text_field :tare %>
+	</div>
+	<div class="field2">
+		<%= f.label :stocking %>
+		<%= f.text_field :stocking, :style => "width: 50px;" %>
+	</div>
+	<div class="field2">
+		<%= f.label :color %>
+		<%= f.text_field :color %>
+	</div>
+	<div class="field2">
+		<%= f.label :service %>
+		<%= f.text_field :service %>
+	</div>

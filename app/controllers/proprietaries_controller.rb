@@ -1,4 +1,6 @@
 class ProprietariesController < ApplicationController
+  before_filter :load_vehicles 
+  
   # GET /proprietary
   # GET /proprietary.xml
   def index
@@ -27,7 +29,11 @@ class ProprietariesController < ApplicationController
   # GET /proprietary/new.xml
   def new
     @proprietary = Proprietary.new
-
+    @proprietary.contacts.build
+    @proprietary.vehicles.build
+    @proprietary.process_registers.build
+    
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @proprietary}
@@ -85,4 +91,11 @@ class ProprietariesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  protected
+  
+  def load_vehicles
+    @vehicles = Vehicle.all.collect {|v| [v.mark, v.id]}
+  end
+  
 end

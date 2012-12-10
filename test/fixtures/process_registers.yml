@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  proprietary: 
+  vehicle: 
+  register_type: MyString
+  process_status: MyString
+  notes: MyText
+  documents: MyString
+
+two:
+  proprietary: 
+  vehicle: 
+  register_type: MyString
+  process_status: MyString
+  notes: MyText
+  documents: MyString

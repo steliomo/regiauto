@@ -86,3 +86,36 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 #content{
 	margin-left: 192px;
 }
+
+#content{ 
+	border: 1px solid #F97E1A;
+	border-radius: 0px 15px 0px 25px;
+	margin-top: 15px;
+	width:707px;
+	min-height:550px;
+	background-color: #F9F1EA;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content #products { 
+	margin: 8px 10px;
+	margin-bottom: 20px;
+}
+
+#content #products h1{ 
+	width:180px;
+	padding: 7px;
+	color: #FFFFFF;
+	border-radius: 5px 0px 5px 0px;
+	background-color: #0784A8;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content #products table, form{ 
+	margin-top: 10px;
+}
+
+#content #products table td,th{ 
+	border: 1px solid;
+}
+

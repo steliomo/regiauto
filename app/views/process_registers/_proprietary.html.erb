@@ -1,17 +1,3 @@
-<div class="proprietary">
-<%=field_set_tag do %>
-<%= form_for @proprietary do |f| %>
-<% if @proprietary.errors.any? %>
-  <div id="error_explanation">
-  	<h2><%= pluralize(@proprietary.errors.count, "error")%> prohibited this proprietary for being saved:</h2>
-	<ul>
-      <% @proprietary.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
  <div class="field">
    <%= f.label :nuit %>
    <%= f.text_field :nuit %>
@@ -37,11 +23,4 @@
 	 <%= render 'contact_fields', :f => contact %>
    <% end %>
  </div>
- <%= link_to_add_fields "Add contacts", f, :contacts %>
- <hr/>
- <div class="actions">
-    <%= f.submit "Add Proprietary" %>
-  </div>
-<% end %>
-<% end %>
-</div>
+ <div class="filed"><%= link_to_add_association "Add Contact", f, :contacts %></div>
