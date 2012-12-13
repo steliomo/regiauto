@@ -27,22 +27,6 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 	font-weight: bold;
 }
 
-#title {
-  	height: 25px;
-	width:705px;
-	background-color: #0784A8;
-	border-left: 2px solid #FB5707;
-	border-right: 2px solid #FB5707;
-	border-radius: 0px 10px 0px 10px;
-	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-}
-
-#title h1 {
-  	padding: 2px 0 5px 5px;
-	font-size: 14px;
-	color: #FFF;
-}
-
 
 #conteiner{
 	width:903px;
@@ -103,10 +87,10 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 }
 
 #content #products h1{ 
-	width:180px;
-	padding: 7px;
+	width:250px;
+	padding: 6px;
 	color: #FFFFFF;
-	border-radius: 5px 0px 5px 0px;
+	border-radius: 0px 8px 0px 8px;
 	background-color: #0784A8;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
@@ -115,7 +99,10 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 	margin-top: 10px;
 }
 
+#content #products table{ 
+	border-collapse: collapse;
+}
+
 #content #products table td,th{ 
 	border: 1px solid;
 }
-

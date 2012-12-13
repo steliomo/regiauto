@@ -12,6 +12,7 @@ gem 'meta_where'
 gem 'cancan' 
 gem 'will_paginate', '~> 3.0'
 gem 'cocoon'
+gem 'simple_form'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

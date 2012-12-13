@@ -1,4 +1,5 @@
-<%= form_for(@process_register) do |f| %>
+<div class="procReg">
+<%= simple_form_for(@process_register) do |f| %>
   <% if @process_register.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@process_register.errors.count, "error") %> prohibited this process_register from being saved:</h2>
@@ -11,40 +12,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-	<%= f.label :proprietary_id %>
-	<%= f.select :proprietary_id, Proprietary.all.collect{|p| [p.name, p.id]}, :prompt => "Select..." %>
+  <div class="">
+	<%= f.association :proprietary %>
   </div>
   <div class="field">
 	<%= f.fields_for :proprietary do |p| %>
 		<%= render 'proprietary', :f => p %>
 	<% end %>
   </div>
-  <div class="filed"><%= link_to_add_association "Add Proprietary", f, :proprietary %></div>
+  <div class="lnk"><%= link_to_add_association "+", f, :proprietary %></div>
   <div class="field">
 	<%= f.label :vehicle_id %>
-	<%= f.select :vehicle_id, Vehicle.all.collect{|v| [v.name, v.id]}, :prompt => "Select..." %>
+	<%= f.select :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
   </div>
   <div class="field">
 	<%= f.fields_for :vehicle do |v| %>
 		<%= render 'vehicle_fields', :f => v %>
 	<% end %>
   </div>
-  <div class="filed"><%= link_to_add_association "Add Vehicle", f, :vehicle %></div>
+  <div class="lnk1"><%= link_to_add_association "+", f, :vehicle %></div>
   <div class="field">
-    <%= f.label :register_type %><br />
+    <%= f.label :register_type %>
     <%= f.select :register_type, ProcessRegister::REGISTERTYPE, :prompt => "Select..." %>
   </div>
   <div class="field">
-    <%= f.label :process_status %><br />
+    <%= f.label :process_status %>
     <%= f.select :process_status, ProcessRegister::STATUS, :prompt => "Select..." %>
   </div>
   <div class="field">
-    <%= f.label :notes %><br />
+    <%= f.label :notes %>
     <%= f.text_area :notes %>
   </div>
-  <div class="field">
-    <%= f.label :documents %><br />
+  <div class="field2">
+    <%= f.label :documents %>
     <%= f.text_field :documents %>
   </div>
   <div class="field">
@@ -52,8 +52,10 @@
 		<%= render 'sale_register_fields', :f => sr %>
 	<% end %>
   </div>
-    <%= link_to_add_fields "Add Sale Register", f, :sale_register %>
+    <div class="st"><%= link_to_add_fields "Add Sale Register", f, :sale_register %></div>
+  <hr/>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

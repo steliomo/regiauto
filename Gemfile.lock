@@ -121,6 +121,9 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     ruby-rc4 (0.1.5)
+    simple_form (2.0.3)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
@@ -148,4 +151,5 @@ DEPENDENCIES
   prawn
   prawnto
   rails (= 3.0.9)
+  simple_form
   will_paginate (~> 3.0)

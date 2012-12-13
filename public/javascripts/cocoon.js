@@ -52,6 +52,8 @@
     var addedContent = insertionNode[insertionMethod](contentNode);
 
     insertionNode.trigger('cocoon:after-insert', [contentNode]);
+
+    $this.closest(".add_fields").hide();
   });
 
 
