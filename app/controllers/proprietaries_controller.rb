@@ -29,11 +29,7 @@ class ProprietariesController < ApplicationController
   # GET /proprietary/new.xml
   def new
     @proprietary = Proprietary.new
-    @proprietary.contacts.build
-    @proprietary.vehicles.build
-    @proprietary.process_registers.build
-    
-    
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @proprietary}

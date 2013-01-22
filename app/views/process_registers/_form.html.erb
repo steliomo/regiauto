@@ -12,40 +12,38 @@
     </div>
   <% end %>
 
-  <div class="">
-	<%= f.association :proprietary %>
-  </div>
+  
   <div class="field">
-	<%= f.fields_for :proprietary do |p| %>
+	<%= f.simple_fields_for :proprietary do |p| %>
 		<%= render 'proprietary', :f => p %>
 	<% end %>
   </div>
-  <div class="lnk"><%= link_to_add_association "+", f, :proprietary %></div>
-  <div class="field">
-	<%= f.label :vehicle_id %>
-	<%= f.select :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
-  </div>
+   <div class="field_proprietary">
+	<%= f.label :proprietary_id %>
+	<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
+  	<span class="lnk"><%= link_to_add_association "+", f, :proprietary %></span>
+  	</div>
   <div class="field">
 	<%= f.fields_for :vehicle do |v| %>
 		<%= render 'vehicle_fields', :f => v %>
 	<% end %>
   </div>
-  <div class="lnk1"><%= link_to_add_association "+", f, :vehicle %></div>
-  <div class="field">
-    <%= f.label :register_type %>
-    <%= f.select :register_type, ProcessRegister::REGISTERTYPE, :prompt => "Select..." %>
+ <div class="field">
+	<%= f.label :vehicle_id %>
+	<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
+	<div class="lnk"><%= link_to_add_association "+", f, :vehicle %></div>
   </div>
   <div class="field">
-    <%= f.label :process_status %>
-    <%= f.select :process_status, ProcessRegister::STATUS, :prompt => "Select..." %>
+    <%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select..." %>
   </div>
   <div class="field">
-    <%= f.label :notes %>
-    <%= f.text_area :notes %>
+    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select..." %>
+  </div>
+  <div class="field">
+    <%= f.input :notes, :as => :text %>
   </div>
   <div class="field2">
-    <%= f.label :documents %>
-    <%= f.text_field :documents %>
+    <%= f.input :documents %>
   </div>
   <div class="field">
 	<%= f.fields_for :sale_register do |sr| %>
@@ -55,7 +53,7 @@
     <div class="st"><%= link_to_add_fields "Add Sale Register", f, :sale_register %></div>
   <hr/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>
 </div>

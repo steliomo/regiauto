@@ -8,12 +8,12 @@
 </head>
 <body>
 	
- <div id="head">
- 	<label>Registo Automóvel</label>
+ <div class="head">
+ 	<label class="lbs">Registo Automóvel</label>
  </div>
-<div id="conteiner">	
-	<div id="navigation">
-	  <ul>
+<div class="conteiner">	
+	<div class="navigation">
+	  <ul class="orderedList">
 		<li><%= link_to "Home", home_index_path %></li>
 	    <li><%= link_to "Main Registers", main_registers_path %></li>
 	    <li><%= link_to "Process", process_registers_path %></li>
@@ -25,8 +25,8 @@
 		<li><%= link_to "Vehicles", vehicles_path %></li>
 	  </ul>
 	</div>
-	<div id="content">
-		<div id="products">	
+	<div class="content">
+		<div class="products">	
 			<%= yield %>
 		</div>
 	</div>

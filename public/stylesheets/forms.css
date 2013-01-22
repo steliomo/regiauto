@@ -1,351 +1,377 @@
 /* All forms */
 
-.mainReg fieldset, .vehicle fieldset, .proprietary fieldset  { 
-	border: 1px solid #F97E1A;
-	margin: 13px 0px 10px 0px;
-	border-radius: 0px 0px 0px 25px;
-	width:707px;
-	background-color: #F9F1EA;
+.content .products table, .content .products h1{ 
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+.content .products table{ 
+	border-collapse: collapse;
+}
+
+.content .products table td,.content .products table th{ 
+	border: 1px solid;
+}
+
+.content .products h1{ 
+	width:250px;
+	padding: 6px;
+	color: #FFFFFF;
+	border-radius: 0px 8px 0px 8px;
+	background-color: #0784A8;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-.mainReg hr, .vehicle hr, .proprietary hr, .procReg hr{
-	border: solid 1px #0784A8;
-	margin: 5px 5px;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
-}
-
-/* Books  */
-.book label{ 
-	float: left;
-	width:24%;
-	margin: 7px 0px;
-}
-
-.book .field input { 
-	height: 26px;
-	width: 260px;
-	border: solid 1px #0784A8;
-	#border-radius: 4px 4px 4px 4px;
-}
-
-.book form{
-	margin-top: 20px;
-}
-
-.book .actions input{
-	width:125px;
-	height: 30px;
-	border-radius: 1px 1px 1px 1px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:100%;
-	float:right;
-}
-
-.book .actions input:hover{
-	background-color: #952802;
-	border: solid 1px #952802;
-}
-
-/* Main Register */
-
-.mainReg label{ 
-	float: left;
-	width: 120px;
-	margin: 4px 15px;
-}
-
-.mainReg .field2 input{ 
-	height: 20px;
-	width: 180px;
-	margin-bottom: 5px;
-	border: solid 1px #8496ba;
-}
-
-.mainReg .field2 input{ 
-	height: 24px;
-	width: 300px;
-	margin-top: -5px;
-	border: solid 1px #8496ba;
-}
-
-.mainReg .field textarea { 
-	height: 60px;
-	width: 412px;
-	border: solid 1px #8496ba;
-	margin-top: -6px;
-	margin-bottom: -8px;
-}
-
-.mainReg .field select{ 
-	height: 28px;
-	width: 200px;
-	border: solid 1px #8496ba;
-	margin-bottom: -5px;
-}
-
-.mainReg form{
-	margin-top: 20px;
-}
-
-.mainReg .actions input{
-	width:140px;
-	height: 30px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:9pt;
-	float:right;
-	font-family: Georgia;
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-
-.mainReg .actions input:hover{
-	background-color: #952802;
-	border: solid 1px #FFF;
-	border-radius: 3px 3px 3px 3px;
-	padding: 0px 3px;
-}
-
-#init{
-	margin: 15px 20px;
-	margin-bottom:-7px;
-}
-
-
-#init li {
-  	display: inline;
-	margin-left: -2px;
-}
-
-#init ul li a:hover {
-  	background-color: #f1b49f;
-	color: #000;
-}
-
-#init li a:link, #init li a:visited  {
-	padding: 5px 15px 8px 15px;
-	background-color: #e8ecee;
-	border-radius: 5px 5px 0px 0px;
-	border: 1px solid #F97E1A;
-	text-decoration: none;
-	font-weight:bold;
-	color: #000;
-}
-
-/* Proprietary*/
-
-.proprietary label{ 
-	float: left;
-	width: 100px;
-	margin: 4px 15px;
-}
-
-.proprietary .field textarea { 
-	height: 60px;
-	width: 410px;
-	border: solid 1px #8496ba;
-	margin-bottom: -10px;
-}
-
-.proprietary .field input{ 
-	height: 24px;
-	width: 300px;
-	margin-bottom: -5px;
-	border: solid 1px #8496ba;
-}
-
-.proprietary form{
-	margin-top: 20px;
-}
-
-.proprietary .actions input{
-	width:140px;
-	height: 30px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:9pt;
-	float:right;
-	font-family: Georgia;
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-
-.proprietary .field select{ 
-	height: 26px;
-	border: solid 1px #8496ba;
-}
-
-.proprietary .actions input:hover{
-	background-color: #952802;
-	border: solid 1px #FFF;
-	border-radius: 3px 3px 3px 3px;
-	padding: 0px 3px;
-}
-
-/* Vehicles */
-.vehicle #part1 label{ 
-	float: left;
-	width: 100px;
-	margin: 2px 15px;
-}
-
-.vehicle #part2 label{ 
-	float: left;
-	width: 130px;
-	margin: 2px 15px;
-}
-
-.vehicle #part2{
-	position: absolute;
-	margin-left: 330px;
-	margin-top: -189px;
-}
-
-.vehicle .field2 input{ 
-	height: 20px;
-	width: 180px;
-	margin-bottom: 5px;
-	border: solid 1px #8496ba;
-}
-
-.vehicle form{
-	margin-top: 20px;
-}
-
-.vehicle .actions input{
-	width:140px;
-	height: 30px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:9pt;
-	float:right;
-	font-family: Georgia;
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-
-.vehicle .field2 select{ 
-	height: 24px;
-	width: 183px;
-	border: solid 1px #8496ba;
-	margin-bottom: 5px;
-}
-
-.vehicle .actions input:hover{
-	background-color: #952802;
-	border: solid 1px #FFF;
-	border-radius: 3px 3px 3px 3px;
-	padding: 0px 3px;
-}
-
-/* Process Register*/
-
-.procReg label{ 
-	float: left;
-	width: 100px;
-	margin: 4px 15px;
-	text-align: right;
-}
-
-.procReg .field2 input{ 
-	height: 24px;
-	width: 300px;
-	border: solid 1px #8496ba;
-}
-
-.procReg .field textarea { 
-	height: 60px;
-	width: 412px;
-	border: solid 1px #8496ba;
-	margin-bottom: -10px;
-}
-
-.procReg .field select{ 
-	height: 28px;
-	width: 200px;
-	border: solid 1px #8496ba;
-	margin-bottom: -5px;
-}
-
-.procReg .lnk, .procReg .lnk1{
-	position: absolute;
-}
-
-.procReg .lnk a{
-	margin: -31px 435px;
-	float:left;
-	padding: 1px 10px 1px 10px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:11pt;
-	float:right;
-	font-family: Georgia;
-	border-radius: 3px 3px 3px 3px;
-	text-decoration: none;
-	text-align: center;
-}
-
-.procReg .lnk1 a{
-	margin: -31px 435px;
-	float:left;
-	padding: 1px 10px 1px 10px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:11pt;
-	float:right;
-	font-family: Georgia;
-	border-radius: 3px 3px 3px 3px;
-	text-decoration: none;
-	text-align: center;
-}
-
-.procReg form{
-	margin-top: 20px;
-}
-
-.procReg .actions input{
-	width:160px;
-	height: 30px;
-	padding: 6px;
-	font-weight:bold;
-	background-color: #FB5707;
-	color: #FFFFFF;
-	border: solid 1px #FB5707;
-	font-size:9pt;
-	float:right;
-	font-family: Georgia;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	border-radius: 3px 3px 3px 3px;
-}
-
-.procReg .actions input:hover{
-	background-color: #952802;
-	border: solid 1px #FFF;
-	border-radius: 3px 3px 3px 3px;
-	padding: 0px 3px;
-}
-
-/*simple_form*/
+#.mainReg fieldset, .vehicle fieldset, .proprietary fieldset  { 
+#	border: 1px solid #0784A8;
+#	#margin: 13px 0px 10px 0px;
+#	#border-radius: 0px 0px 0px 25px;
+#	#width:707px;
+#	#background-color: #F9F1EA;
+#	#box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+#}
+#
+#.proprietary fieldset legend { 
+#	margin-left:10px;
+#	font-weight: bold;
+#	#width:150px;
+#	padding: 6px;
+#	color: #FFFFFF;
+#	border-radius: 0px 8px 0px 8px;
+#	background-color: #0784A8;
+#	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+#}
+#
+#.mainReg hr, .vehicle hr, .proprietary hr, .procReg hr{
+#	border: solid 1px #0784A8;
+#	margin: 5px 5px;
+#	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+#}
+#
+#/* Books  */
+#.book label{ 
+#	float: left;
+#	width:24%;
+#	margin: 7px 0px;
+#}
+#
+#.book .field input { 
+#	height: 26px;
+#	width: 260px;
+#	border: solid 1px #0784A8;
+#	#border-radius: 4px 4px 4px 4px;
+#}
+#
+#.book form{
+#	margin-top: 20px;
+#}
+#
+#.book .actions input{
+#	width:125px;
+#	height: 30px;
+#	border-radius: 1px 1px 1px 1px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:100%;
+#	float:right;
+#}
+#
+#.book .actions input:hover{
+#	background-color: #952802;
+#	border: solid 1px #952802;
+#}
+#
+#/* Main Register */
+#
+#.mainReg label{ 
+#	float: left;
+#	width: 120px;
+#	margin: 4px 15px;
+#}
+#
+#.mainReg .field2 input{ 
+#	height: 20px;
+#	width: 180px;
+#	margin-bottom: 5px;
+#	border: solid 1px #8496ba;
+#}
+#
+#.mainReg .field2 input{ 
+#	height: 24px;
+#	width: 300px;
+#	margin-top: -5px;
+#	border: solid 1px #8496ba;
+#}
+#
+#.mainReg .field textarea { 
+#	height: 60px;
+#	width: 412px;
+#	border: solid 1px #8496ba;
+#	margin-top: -6px;
+#	margin-bottom: -8px;
+#}
+#
+#.mainReg .field select{ 
+#	height: 28px;
+#	width: 200px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: -5px;
+#}
+#
+#.mainReg form{
+#	margin-top: 20px;
+#}
+#
+#.mainReg .actions input{
+#	width:140px;
+#	height: 30px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:9pt;
+#	float:right;
+#	font-family: Georgia;
+#	margin-bottom: 5px;
+#	margin-right: 5px;
+#}
+#
+#.mainReg .actions input:hover{
+#	background-color: #952802;
+#	border: solid 1px #FFF;
+#	border-radius: 3px 3px 3px 3px;
+#	padding: 0px 3px;
+#}
+#
+##init{
+#	margin: 15px 20px;
+#	margin-bottom:-7px;
+#}
+#
+#
+##init li {
+#  	display: inline;
+#	margin-left: -2px;
+#}
+#
+##init ul li a:hover {
+#  	background-color: #f1b49f;
+#	color: #000;
+#}
+#
+##init li a:link, #init li a:visited  {
+#	padding: 5px 15px 8px 15px;
+#	background-color: #e8ecee;
+#	border-radius: 5px 5px 0px 0px;
+#	border: 1px solid #F97E1A;
+#	text-decoration: none;
+#	font-weight:bold;
+#	color: #000;
+#}
+#
+#/* Proprietary*/
+#
+#.proprietary ul li label{ 
+#	float: left;
+#	#width: 100px;
+#	margin: 4px 6px;
+#}
+#
+#.proprietary ul li textarea { 
+#	height: 60px;
+#	width: 290px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: -2px;
+#}
+#
+#.proprietary ul li input{ 
+#	height: 24px;
+#	width: 280px;
+#	margin-bottom: -5px;
+#	border: solid 1px #8496ba;
+#}
+#
+#.proprietary ul li.nuit input{ 
+#	width: 150px;
+#}
+#
+#.proprietary form{
+#	margin-top: 20px;
+#}
+#
+#.proprietary .actions input{
+#	width:140px;
+#	height: 30px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:9pt;
+#	float:right;
+#	font-family: Georgia;
+#	margin-bottom: 5px;
+#	margin-right: 5px;
+#}
+#
+#.proprietary ul li select{ 
+#	height: 26px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: -5px;
+#}
+#
+#.proprietary .actions input:hover{
+#	background-color: #952802;
+#	border: solid 1px #FFF;
+#	border-radius: 3px 3px 3px 3px;
+#	padding: 0px 3px;
+#}
+#
+#/* Vehicles */
+#.vehicle #part1 label{ 
+#	float: left;
+#	width: 100px;
+#	margin: 2px 15px;
+#}
+#
+#.vehicle #part2 label{ 
+#	float: left;
+#	width: 130px;
+#	margin: 2px 15px;
+#}
+#
+#.vehicle #part2{
+#	position: absolute;
+#	margin-left: 330px;
+#	margin-top: -189px;
+#}
+#
+#.vehicle .field2 input{ 
+#	height: 20px;
+#	width: 180px;
+#	margin-bottom: 5px;
+#	border: solid 1px #8496ba;
+#}
+#
+#.vehicle form{
+#	margin-top: 20px;
+#}
+#
+#.vehicle .actions input{
+#	width:140px;
+#	height: 30px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:9pt;
+#	float:right;
+#	font-family: Georgia;
+#	margin-bottom: 5px;
+#	margin-right: 5px;
+#}
+#
+#.vehicle .field2 select{ 
+#	height: 24px;
+#	width: 183px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: 5px;
+#}
+#
+#.vehicle .actions input:hover{
+#	background-color: #952802;
+#	border: solid 1px #FFF;
+#	border-radius: 3px 3px 3px 3px;
+#	padding: 0px 3px;
+#}
+#
+#/* Process Register*/
+#
+#.procReg label{ 
+#	float: left;
+#	width: 100px;
+#	margin: 4px 15px;
+#	text-align: right;
+#}
+#
+#.procReg .field2 input{ 
+#	height: 24px;
+#	width: 300px;
+#	border: solid 1px #8496ba;
+#}
+#
+#.procReg .field textarea { 
+#	height: 60px;
+#	width: 412px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: -10px;
+#}
+#
+#.procReg .field select{ 
+#	height: 28px;
+#	width: 200px;
+#	border: solid 1px #8496ba;
+#	margin-bottom: -5px;
+#}
+#
+#.procReg .lnk, .procReg .lnk1{
+#	position: absolute;
+#}
+#
+#.procReg .lnk a{
+#	margin: -21px 435px;
+#	float:left;
+#	padding: 1px 10px 1px 10px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:11pt;
+#	float:right;
+#	font-family: Georgia;
+#	border-radius: 3px 3px 3px 3px;
+#	text-decoration: none;
+#	text-align: center;
+#}
+#
+#.procReg form{
+#	margin-top: 20px;
+#}
+#
+#.procReg .actions input{
+#	width:160px;
+#	height: 30px;
+#	padding: 6px;
+#	font-weight:bold;
+#	background-color: #FB5707;
+#	color: #FFFFFF;
+#	border: solid 1px #FB5707;
+#	font-size:9pt;
+#	float:right;
+#	font-family: Georgia;
+#	margin-bottom: 5px;
+#	margin-right: 5px;
+#	border-radius: 3px 3px 3px 3px;
+#}
+#
+#.procReg .actions input:hover{
+#	background-color: #952802;
+#	border: solid 1px #FFF;
+#	border-radius: 3px 3px 3px 3px;
+#	padding: 0px 3px;
+#}
+#
+##process_register_proprietary_attributes_birth_day_1i, #process_register_sale_register_attributes_buy_date_1i{ width: 70px;}
+##process_register_proprietary_attributes_birth_day_2i, #process_register_sale_register_attributes_buy_date_2i{ width: 100px;}
+##process_register_proprietary_attributes_birth_day_3i, #process_register_sale_register_attributes_buy_date_3i{ width: 50px;}
+#
+#/*simple_form*/
 #.simple_form label {
 #  float: left;
-#  width: 100px;
+#  width: 80px;
 #  text-align: right;
-#  margin: 2px 10px;
+#  margin: 2px 5px;
 #}
 #
 #.simple_form div.input {
@@ -353,7 +379,7 @@
 #}
 #
 #.simple_form div.boolean, .simple_form input[type='submit'] {
-#  margin-left: 120px;
+#  #margin-left: 120px;
 #}
 #
 #.simple_form div.boolean label, .simple_form label.collection_radio {
@@ -368,7 +394,7 @@
 #
 #.simple_form .error {
 #  clear: left;
-#  margin-left: 120px;
+#  margin-left: 100px;
 #  font-size: 12px;
 #  color: #D00;
 #  display: block;
@@ -381,4 +407,15 @@
 #  color: #555;
 #  display: block;
 #  font-style: italic;
+#}
+#
+#.simple_form ul li.area{
+#	position: absolute;
+#	margin-left: 300px;
+#	margin-top: -66px;
+#}
+#
+#.simple_form ul {
+#	margin:0;
+#	padding:0;
 #}

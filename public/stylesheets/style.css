@@ -2,14 +2,9 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
  	font: 11px/1.5 "Lucida Grande", Georgia, "Times New Roman", Times, serif;
 }
 
-*{
-	margin: 0;
-	padding: 0;
-}
-
-#head {
+.head {
   	height: 70px;
-	width:900px;
+	width:70%;
 	background-color: #0784A8;
 	border-bottom: 2px solid #FB5707;
 	margin: 20px auto 10px auto;
@@ -18,7 +13,7 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 	border-top: 5px solid #FB5707;
 }
 
-#head label{
+.head .lbs{
 	float: left;
 	color: #FFF;
 	font-size: 18pt;
@@ -28,32 +23,32 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 }
 
 
-#conteiner{
-	width:903px;
+.conteiner{
+	width:70%;
 	margin: auto;
 
 }
 
-#navigation{
-	width:180px;
+.navigation{
+	width:14.5%;
 	position:absolute;
 	margin: -2px 0px;
 }
 
-#navigation ul{
+.navigation .orderedList{
 	list-style:none;
 }
 
-#navigation li {
+.navigation li {
   margin:2px;
 }
 
-#navigation ul li a:hover {
+.navigation .orderedList li a:hover {
   	background-color: #FB5707;
 	color: #FFFFFF;
 }
 
-#navigation li a:link, #navigation li a:visited  {
+.navigation li a:link, .navigation li a:visited  {
 	display: block;
 	padding: 0.4em 0 0.4em 0.5em;
 	border-left: 10px solid #FB5707;
@@ -67,42 +62,21 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 	overflow: hidden;
 }
 
-#content{
+.content{
 	margin-left: 192px;
 }
 
-#content{ 
+.content{ 
 	border: 1px solid #F97E1A;
 	border-radius: 0px 15px 0px 25px;
 	margin-top: 15px;
-	width:707px;
+	width:78%;
 	min-height:550px;
 	background-color: #F9F1EA;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-#content #products { 
+.content .products { 
 	margin: 8px 10px;
 	margin-bottom: 20px;
-}
-
-#content #products h1{ 
-	width:250px;
-	padding: 6px;
-	color: #FFFFFF;
-	border-radius: 0px 8px 0px 8px;
-	background-color: #0784A8;
-	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-}
-
-#content #products table, form{ 
-	margin-top: 10px;
-}
-
-#content #products table{ 
-	border-collapse: collapse;
-}
-
-#content #products table td,th{ 
-	border: 1px solid;
 }

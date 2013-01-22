@@ -1,6 +1,5 @@
 <div class="proprietary">
-<%=field_set_tag do %>
-<%= form_for @proprietary do |f| %>
+<%= simple_form_for @proprietary do |f| %>
 <% if @proprietary.errors.any? %>
   <div id="error_explanation">
   	<h2><%= pluralize(@proprietary.errors.count, "error")%> prohibited this proprietary for being saved:</h2>
@@ -11,37 +10,21 @@
     </ul>
   </div>
 <% end %>
+<ul>
+  <li class="nuit"><%= f.input :nuit %></li>
+  <li><%= f.input :name %></li>
+  <li><%= f.input :birth_day, :order => [:day, :month ,:year] %></li>
+  <li><%= f.input :occupation %></li>
+  <li class="area"><%= f.input :address, :required => false %></li>
 
- <div class="field">
-   <%= f.label :nuit %>
-   <%= f.text_field :nuit %>
- </div>
- <div class="field">
-   <%= f.label :name %>
-   <%= f.text_field :name %>
- </div>
- <div class="field">
-   <%= f.label :birth_day %>
-   <%= f.date_select :birth_day, :order => [:day, :month ,:year] %>
- </div>
- <div class="field">
-   <%= f.label :occupation %>
-   <%= f.text_field :occupation %>
- </div>
- <div class="field">
-   <%= f.label :address %>
-   <%= f.text_area :address %>
- </div>
- <div class="field">
-   <%= f.fields_for :contacts do |contact| %>
-	 <%= render 'contact_fields', :f => contact %>
-   <% end %>
- </div>
+  <%= f.fields_for :contacts do |c| %>
+  	<% render 'contact_fields', :f => c %>
+  <% end %>
+</ul>
  <%= link_to_add_fields "Add contacts", f, :contacts %>
  <hr/>
  <div class="actions">
     <%= f.submit "Add Proprietary" %>
   </div>
-<% end %>
 <% end %>
 </div>
