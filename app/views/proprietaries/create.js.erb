@@ -1,6 +1,0 @@
-<% if @proprietary.valid? %>
- $('#pty h2, #pty div fieldset').fadeOut();
-<% else %>
- $('#pty').html('');
- $('#pty').append("<%= escape_javascript(render(:partial =>'form'))%>");
-<% end %>

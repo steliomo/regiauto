@@ -1,11 +1,6 @@
 class MainRegister < ActiveRecord::Base
   
-  belongs_to :proprietary, :class_name => "Proprietary", :foreign_key => "Proprietary_id" 
-  belongs_to :vehicle, :class_name => "Vehicle", :foreign_key => "Vehicle_id"
-  
-  validates_presence_of :Proprietary_id,  :Vehicle_id
-  
-  validates_uniqueness_of :Vehicle_id
+  belongs_to :process_register
   
   STATUS =%w(Open Closed)
   PROVENIENCE =%w(Importado Construido Reconstruido)

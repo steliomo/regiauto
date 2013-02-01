@@ -1,17 +1,15 @@
+<div class="field">
+	<b><%= f.input :nuit, :as => :integer, :required => false %></b>
+	<%= f.input :name, :required => false %>
+	<%= f.input :birth_day,:as => :date, :order => [:day, :month ,:year] %>
+	<%= f.input :occupation %>
+	<%= f.input :address, :as => :text, :required => false %>
 
-<div class="proprietary">
-	<%= field_set_tag 'Proprietary' do %>
-<ul>
-  <li class="nuit"><%= f.input :nuit %></li>
-  <li><%= f.input :name %></li>
-  <li><%= f.input :birth_day, :order => [:day, :month ,:year] %></li>
-  <li><%= f.input :occupation %></li>
-  <li class="area"><%= f.input :address, :required => false %></li>
-
-  <%= f.fields_for :contacts do |c| %>
-  	<% render 'contact_fields', :f => c %>
-  <% end %>
-</ul>
- <%= link_to_add_fields "Add contacts", f, :contacts %>
-<% end %>
+	<div class='nav'><%= link_to_remove_fields "Remove", f %></div> </br>
+	
+	<%= f.simple_fields_for :contacts do |contact| %>
+		<%= render 'contact_fields', :f => contact %>
+	<% end %>
+	
+	<div class="nav"><%= link_to_add_association "Add Contact", f, :contacts %></div>
 </div>

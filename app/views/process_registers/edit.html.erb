@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @process_register %> |
-<%= link_to 'Back', process_registers_path %>
+<div class="edit_menu">
+	<ul>
+		<li><%= link_to 'Show', @process_register %></li> 
+		<li><%= link_to 'Back', process_registers_path %></li>
+	</ul>
+</div>

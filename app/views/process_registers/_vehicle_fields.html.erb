@@ -1,64 +1,22 @@
-<div class="vehicle">
-<div id="part1">	
-	<div class="field2">
-		<%= f.label :name, "Number plate" %>
-		<%= f.text_field :name, :style => "width: 120px;" %>
+<div class="field">
+	<div class="vehicle">
+	  	<%= field_set_tag 'Motor' do %>
+	  		<%= f.input :name, :label => "Number Plate", :input_html => { :style => "width: 100px;"},:required => false	%>
+	  	<% end %>
+	  	<%= f.input :mark, :input_html => { :style => "width: 100px;", :maxlength => 3}, :required => false  %>
+	  	<%= f.input :model, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :frame_number, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :engine_number, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :cylinders, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :cylinders_cc, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :petrol, :collection => Vehicle::PETROL, :prompt => "Select", :required => false, :input_html => { :style => "width: 100px;"}  %>
+	  	<%= f.input :transmission, :collection => Vehicle::TRANS, :prompt => "Select", :required => false, :input_html => { :style => "width: 100px;"}  %>
+	  	<%= f.input :pneumatic_measures, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :gross_weight, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :tare, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :stocking, :style => "width: 50px;", :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :color, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
+	  	<%= f.input :service, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
 	</div>
-	<div class="field2">
-		<%= f.label :mark %>
-		<%= f.text_field :mark %>
-	</div>
-	<div class="field2">
-		<%= f.label :model %>
-		<%= f.text_field :model %>
-	</div>
-	<div class="field2">
-		<%= f.label :frame_number %>
-		<%= f.text_field :frame_number %>
-	</div>
-	<div class="field2">
-		<%= f.label :engine_number %>
-		<%= f.text_field :engine_number %>
-	</div>
-	<div class="field2">
-		<%= f.label :cylinders %>
-		<%= f.text_field :cylinders, :style => "width: 50px;" %>
-	</div>
-	<div class="field2">
-		<%= f.label :cylinders_cc, 'Cylinder Size' %>
-		<%= f.text_field :cylinders_cc %>
-	</div>
-	<div class="field2">
-		<%= f.label :petrol %>
-		<%= f.select :petrol, Vehicle::PETROL, :prompt => "Select"  %>
-	</div>
+	<div class='nav'><%= link_to_remove_fields "Remove", f %></div> </br>
 </div>
-<div id="part2">	
-	<div class="field2">
-		<%= f.label :transmission %>
-		<%= f.select :transmission, Vehicle::TRANS, :prompt => "Select"  %>
-	</div>
-	<div class="field2">
-		<%= f.label :pneumatic_measures %>
-		<%= f.text_field :pneumatic_measures %>
-	</div>
-	<div class="field2">
-		<%= f.label :gross_weight %>
-		<%= f.text_field :gross_weight %>
-	</div>
-	<div class="field2">
-		<%= f.label :tare %>
-		<%= f.text_field :tare %>
-	</div>
-	<div class="field2">
-		<%= f.label :stocking %>
-		<%= f.text_field :stocking, :style => "width: 50px;" %>
-	</div>
-	<div class="field2">
-		<%= f.label :color %>
-		<%= f.text_field :color %>
-	</div>
-	<div class="field2">
-		<%= f.label :service %>
-		<%= f.text_field :service %>
-	</div>

@@ -7,7 +7,7 @@ class SaleRegister < ActiveRecord::Base
   validates_uniqueness_of :process_register_id
   
   validates_presence_of :buy_date, :value, :seller
-  
+
   attr_accessor :phone
   
 end

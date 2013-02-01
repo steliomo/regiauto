@@ -14,7 +14,7 @@
         assoc                 = $this.data('association'),
         assocs                = $this.data('associations'),
         content               = $this.data('association-insertion-template'),
-        insertionMethod       = $this.data('association-insertion-method') || $this.data('association-insertion-position') || 'before';
+        insertionMethod       = $this.data('association-insertion-method') || $this.data('association-insertion-position') || 'after';
         insertionNode         = $this.data('association-insertion-node'),
         insertionTraversal    = $this.data('association-insertion-traversal'),
         regexp_braced         = new RegExp('\\[new_' + assoc + '\\](.*?\\s)', 'g'),
@@ -53,7 +53,7 @@
 
     insertionNode.trigger('cocoon:after-insert', [contentNode]);
 
-    $this.closest(".add_fields").hide();
+    //$this.closest(".add_fields").hide();
   });
 
 

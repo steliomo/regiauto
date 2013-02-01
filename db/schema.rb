@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205223505) do
+ActiveRecord::Schema.define(:version => 20130128133318) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
@@ -20,30 +20,22 @@ ActiveRecord::Schema.define(:version => 20121205223505) do
   end
 
   create_table "hypothecs", :force => true do |t|
-    t.string   "name",              :limit => 50
-    t.integer  "proprietary_id",                  :null => false
-    t.string   "applicant",         :limit => 50
-    t.string   "contract_document", :limit => 70
+    t.string   "applicant",           :limit => 50
+    t.string   "contract_document",   :limit => 70
     t.float    "value"
-    t.integer  "vehicle_id",                      :null => false
     t.float    "outsanding"
-    t.string   "dept_origin",       :limit => 50
+    t.string   "dept_origin",         :limit => 50
     t.float    "interest_rate"
-    t.text     "notes"
-    t.string   "status",                          :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_register_id"
   end
 
   create_table "main_registers", :force => true do |t|
-    t.string   "name",                :limit => 50, :null => false
-    t.integer  "Proprietary_id"
     t.string   "vehicle_provenience"
-    t.integer  "Vehicle_id"
-    t.text     "notes"
-    t.string   "status",                            :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_register_id"
   end
 
   create_table "phones", :force => true do |t|
@@ -77,16 +69,12 @@ ActiveRecord::Schema.define(:version => 20121205223505) do
   end
 
   create_table "proprietary_registers", :force => true do |t|
-    t.string   "name",                         :null => false
-    t.integer  "proprietary_id",               :null => false
     t.date     "aquire_date"
-    t.string   "register_dute",  :limit => 50
+    t.string   "register_dute",       :limit => 50
     t.float    "value"
-    t.integer  "vehicle_id",                   :null => false
-    t.text     "notes"
-    t.string   "status",                       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_register_id"
   end
 
   create_table "sale_registers", :force => true do |t|

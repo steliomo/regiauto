@@ -12,31 +12,10 @@
     </div>
   <% end %>
 
-  <div class="field" id="pty">
-    <%= f.label :proprietary %>
-	<%= f.text_field :Proprietary_id, "data-pre" => @main_register.proprietary.to_a.map(&:attributes).to_json  %>
-  </div>
  
   <div class="field2">
   	<%= f.label :type %>
 	<%= f.text_field :type %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :vehicle_provenience %>
-    <%= f.select :vehicle_provenience, MainRegister::PROVENIENCE, :prompt => "Select"  %>
-  </div>
-  <div class="field">
-    <%= f.label :vehicle %>
-    <%= f.text_field :Vehicle_id, "data-pre" => @main_register.vehicle.to_a.map(&:attributes).to_json %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %>
-    <%= f.text_area :notes %>
-  </div>
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.select :status, MainRegister::STATUS, :prompt => "Select"  %>
   </div>
   <hr/>
   <div class="actions">

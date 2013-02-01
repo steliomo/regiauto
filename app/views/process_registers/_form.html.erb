@@ -1,4 +1,3 @@
-<div class="procReg">
 <%= simple_form_for(@process_register) do |f| %>
   <% if @process_register.errors.any? %>
     <div id="error_explanation">
@@ -12,32 +11,31 @@
     </div>
   <% end %>
 
-  
-  <div class="field">
+  <div class="field_proprietary">
 	<%= f.simple_fields_for :proprietary do |p| %>
-		<%= render 'proprietary', :f => p %>
+		<%= render 'proprietary_fields', :f => p %>
 	<% end %>
   </div>
    <div class="field_proprietary">
 	<%= f.label :proprietary_id %>
 	<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
-  	<span class="lnk"><%= link_to_add_association "+", f, :proprietary %></span>
+  	<span class="lnk"><%= link_to_add_association "+", f, :proprietary, :class => "btn" %></span>
   	</div>
-  <div class="field">
+  <div class="field vehicle">
 	<%= f.fields_for :vehicle do |v| %>
 		<%= render 'vehicle_fields', :f => v %>
 	<% end %>
   </div>
- <div class="field">
+ <div class="field_proprietary">
 	<%= f.label :vehicle_id %>
 	<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
-	<div class="lnk"><%= link_to_add_association "+", f, :vehicle %></div>
+	<div class="lnk"><%= link_to_add_association "+", f, :vehicle, :class => "btn" %></div>
+  </div>
+  <div class = "field">
+	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false %>
   </div>
   <div class="field">
-    <%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select..." %>
-  </div>
-  <div class="field">
-    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select..." %>
+    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select...", :required => false %>
   </div>
   <div class="field">
     <%= f.input :notes, :as => :text %>
@@ -45,15 +43,42 @@
   <div class="field2">
     <%= f.input :documents %>
   </div>
+  
+  <div class="process_menu">                                                             
+	<ul>
+		<li><%= link_to_add_fields "Add Main Register", f, :main_register %></li>
+  		<li><%= link_to_add_fields "Add Sale Register", f, :sale_register %></li>
+  		<li><%= link_to_add_fields "Add Hypothec Register", f, :hypothec %></li>
+  		<li><%= link_to_add_fields "Add Proprietary Register", f, :proprietary_register %></li>
+	</ul>
+  </div>
+
   <div class="field">
-	<%= f.fields_for :sale_register do |sr| %>
+	<%= f.simple_fields_for :main_register do |mr| %>
+		<%= render 'main_register_fields', :f => mr %>
+	<% end %>
+  </div>
+ 
+  <div class="field">
+	<%= f.simple_fields_for :sale_register do |sr| %>
 		<%= render 'sale_register_fields', :f => sr %>
 	<% end %>
   </div>
-    <div class="st"><%= link_to_add_fields "Add Sale Register", f, :sale_register %></div>
+
+  <div class="field">
+	<%= f.simple_fields_for :hypothec do |h| %>
+		<%= render 'hypothec_fields', :f => h %>
+	<% end %>
+  </div>
+
+  <div class="field">
+	<%= f.simple_fields_for :proprietary_register do |h| %>
+		<%= render 'proprietary_register_fields', :f => h %>
+	<% end %>
+  </div>
+  
   <hr/>
   <div class="actions">
     <%= f.button :submit %>
   </div>
 <% end %>
-</div>

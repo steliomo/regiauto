@@ -2,7 +2,6 @@
 
 .content .products table, .content .products h1{ 
 	margin-top: 10px;
-	margin-bottom:10px;
 }
 
 .content .products table{ 
@@ -21,6 +20,213 @@
 	background-color: #0784A8;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
+
+.content .products form hr{
+	border: solid 1px #0784A8;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.content .products .nav a{
+	padding: 3px 10px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:9pt;
+	font-family: Georgia;
+	border-radius: 3px 3px 3px 3px;
+	text-decoration: none;
+}
+
+.content .products .nav a:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+}
+
+
+/* processs main form */
+
+.field_proprietary{
+	width:338px;
+	margin-bottom: 8px;
+}
+
+.field_proprietary span .lnk{
+	position: absolute;
+}
+
+.lnk .btn{
+	margin: -27px 0px;
+	padding: 1px 10px 1px 10px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:11pt;
+	float:right;
+	font-family: Georgia;
+	border-radius: 3px 3px 3px 3px;
+	text-decoration: none;
+	text-align: center;
+}
+
+form > .field select{
+    height: 28px;
+    width: 218px;
+    border: 1px solid #8496ba;
+}
+
+form > .field textarea{
+    height: 75px;
+    width: 550px;
+    border: 1px solid #8496ba;
+}
+
+form > .field label, .field2 label {
+    min-width: 85px;
+	float:left;
+	padding: 4px 0px;
+}
+
+.field2 input{
+    height: 25px;
+    width: 300px;
+    border: 1px solid #8496ba;
+	margin-top: -8px;
+	margin-bottom:8px;
+}
+
+.actions input{
+	font-weight:bold;
+	padding:4px 4px;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:9pt;
+	float:right;
+	font-family: Georgia;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.actions input:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.edit_menu{
+	width: 100px;
+}
+
+.edit_menu ul li{
+	display: inline;
+}
+
+.edit_menu ul li a{
+	padding: 4px 4px;
+	font-weight:bold;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #FB5707;
+	font-size:9pt;
+	font-family: Georgia;
+	border-radius: 3px 3px 3px 3px;
+	text-decoration: none;
+}
+
+.edit_menu ul li a:hover{
+	background-color: #952802;
+	border: solid 1px #FFF;
+	border-radius: 3px 3px 3px 3px;
+	padding: 4px 4px;
+}
+
+.process_menu{
+	margin:5px 0px 10px 0px;
+}
+
+.process_menu ul li{
+	display:inline;
+}
+
+.process_menu ul li a:hover {
+  	background-color: #f1b49f;
+	color: #000;
+}
+
+.process_menu li a:link, #init li a:visited  {
+	padding: 6px 10px;
+	background-color: #e8ecee;
+	border-radius: 0px 8px 0px 8px;
+	border: 1px solid #F97E1A;
+	text-decoration: none;
+	font-weight:bold;
+	color: #0784A8;
+}
+
+/* proprietary form */
+
+.field_proprietary .field{
+	width:650px;
+	margin-top:8px;
+}
+
+.field_proprietary .field > div input, .field_proprietary .field b > div input{
+	height: 25px;
+    width: 280px;
+    border: 1px solid #8496ba;
+	margin-top: -8px;
+	margin-bottom:12px;
+}
+
+.field_proprietary .field > div label, .field_proprietary .field b > div label{
+	min-width: 85px;
+	float:left;
+	padding: 4px 0px;
+}
+
+.field_proprietary .field b > div input{
+	width: 150px;
+}
+
+.field_proprietary .field > div select{
+	height: 28px;
+    border: 1px solid #8496ba;
+	margin-bottom: 12px;
+	margin-top:-6px;
+}
+
+.field_proprietary .field > div textarea{
+	height: 75px;
+    width: 400px;
+    border: 1px solid #8496ba;
+	margin-top:-6px;
+}
+
+/* Contatcs form */
+.field .contacts {
+	margin-top:12px;
+}
+
+.field .contacts .country_code input{
+	width:40px;
+}
+
+.field .contacts .prefix_code input{
+	width:30px;
+}
+
+.field .contacts .number input{
+	width:90px;
+}
+
+/* vehicle */
+
+.field .vehicle fieldset {
+	border:1px solid;
+}
+
 
 #.mainReg fieldset, .vehicle fieldset, .proprietary fieldset  { 
 #	border: 1px solid #0784A8;
@@ -42,11 +248,6 @@
 #	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 #}
 #
-#.mainReg hr, .vehicle hr, .proprietary hr, .procReg hr{
-#	border: solid 1px #0784A8;
-#	margin: 5px 5px;
-#	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
-#}
 #
 #/* Books  */
 #.book label{ 
@@ -124,27 +325,8 @@
 #	margin-top: 20px;
 #}
 #
-#.mainReg .actions input{
-#	width:140px;
-#	height: 30px;
-#	font-weight:bold;
-#	background-color: #FB5707;
-#	color: #FFFFFF;
-#	border: solid 1px #FB5707;
-#	font-size:9pt;
-#	float:right;
-#	font-family: Georgia;
-#	margin-bottom: 5px;
-#	margin-right: 5px;
-#}
-#
-#.mainReg .actions input:hover{
-#	background-color: #952802;
-#	border: solid 1px #FFF;
-#	border-radius: 3px 3px 3px 3px;
-#	padding: 0px 3px;
-#}
-#
+
+
 ##init{
 #	margin: 15px 20px;
 #	margin-bottom:-7px;
@@ -313,26 +495,6 @@
 #	width: 200px;
 #	border: solid 1px #8496ba;
 #	margin-bottom: -5px;
-#}
-#
-#.procReg .lnk, .procReg .lnk1{
-#	position: absolute;
-#}
-#
-#.procReg .lnk a{
-#	margin: -21px 435px;
-#	float:left;
-#	padding: 1px 10px 1px 10px;
-#	font-weight:bold;
-#	background-color: #FB5707;
-#	color: #FFFFFF;
-#	border: solid 1px #FB5707;
-#	font-size:11pt;
-#	float:right;
-#	font-family: Georgia;
-#	border-radius: 3px 3px 3px 3px;
-#	text-decoration: none;
-#	text-align: center;
 #}
 #
 #.procReg form{

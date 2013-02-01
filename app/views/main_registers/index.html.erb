@@ -18,12 +18,12 @@
 <% @main_registers.each do |main_register| %>
   <tr>
 	<td><%= main_register.id %></td>
-	<td><%= main_register.name %></td>
-    <td><%= main_register.proprietary.name %></td>
+	<td><%= main_register %></td>
+    <td><%= main_register %></td>
     <td><%= main_register.vehicle_provenience %></td>
-    <td><%= main_register.vehicle.name %></td>
-    <td><%= main_register.status %></td>
-    <td><%= main_register.notes %></td>
+    <td><%= main_register %></td>
+    <td><%= main_register %></td>
+    <td><%= main_register %></td>
     <td><%= link_to 'Show', main_register %></td>
     <td><%= link_to 'Edit', edit_main_register_path(main_register) %></td>
     <td><%= link_to 'Destroy', main_register, :confirm => 'Are you sure?', :method => :delete %></td>
