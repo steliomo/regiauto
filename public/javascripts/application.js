@@ -29,3 +29,21 @@ function add_fields(link, association, content) {
     var regexp = new RegExp("new_" + association, "g");  
 	$(".process_menu").after(content.replace(regexp,new_id));  
 }
+
+$(function(){$("#process_register_register_type").click(function() {
+  var a = $("#process_register_register_type").val();
+  if (a== "registo_inicial"){
+	$(".hypothec, .sale_register, .proprietary_register").hide();
+	$(".main_register").show();
+  }else if(a=="compra_venda"){
+	$(".main_register, .hypothec, .proprietary_register").hide();
+	$(".sale_register").show();
+  }else if(a=="hipoteca"){
+	$(".main_register, .sale_register, .proprietary_register").hide();
+	$(".hypothec").show();
+  }else{
+	$(".main_register, .sale_register, .hypothec").hide();
+	$(".proprietary_register").show();
+ }
+});
+});

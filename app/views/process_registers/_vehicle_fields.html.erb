@@ -1,22 +1,20 @@
 <div class="field">
-	<div class="vehicle">
-	  	<%= field_set_tag 'Motor' do %>
-	  		<%= f.input :name, :label => "Number Plate", :input_html => { :style => "width: 100px;"},:required => false	%>
-	  	<% end %>
-	  	<%= f.input :mark, :input_html => { :style => "width: 100px;", :maxlength => 3}, :required => false  %>
-	  	<%= f.input :model, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :frame_number, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :engine_number, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :cylinders, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :cylinders_cc, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :petrol, :collection => Vehicle::PETROL, :prompt => "Select", :required => false, :input_html => { :style => "width: 100px;"}  %>
-	  	<%= f.input :transmission, :collection => Vehicle::TRANS, :prompt => "Select", :required => false, :input_html => { :style => "width: 100px;"}  %>
-	  	<%= f.input :pneumatic_measures, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :gross_weight, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :tare, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :stocking, :style => "width: 50px;", :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :color, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	  	<%= f.input :service, :required => false, :input_html => { :style => "width: 100px;", :maxlength => 3} %>
-	</div>
-	<div class='nav'><%= link_to_remove_fields "Remove", f %></div> </br>
+  	<%= f.input :name, :label => "Number Plate", :input_html => { :style => "width: 100px;"},:required => false	%>
+	<%= f.input :mark, :required => false, :error => false  %>
+  	<%= f.input :model, :required => false, :error => false %>
+  	<%= f.input :frame_number, :required => false, :error => false %>
+  	<%= f.input :engine_number, :required => false, :error => false %>
+	<b>  	
+		<%= f.input :cylinders, :required => false, :error => false, :input_html => { :style => "width: 60px;"} %>
+		<%= f.input :cylinders_cc, :required => false, :error => false, :input_html => { :style => "width: 100px;"} %>
+  		<%= f.input :petrol, :collection => Vehicle::PETROL, :prompt => "Select", :required => false, :error => false %>
+  		<%= f.input :transmission, :collection => Vehicle::TRANS, :prompt => "Select", :required => false, :error => false %>
+	</b>  	
+	<%= f.input :pneumatic_measures, :required => false, :error => false, :input_html => { :style => "width: 150px;"} %>
+  	<%= f.input :gross_weight, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+  	<%= f.input :tare, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+  	<%= f.input :stocking, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+  	<%= f.input :color, :required => false, :error => false %>
+  	<%= f.input :service, :required => false, :error => false %>
+  <div class='nav'><%= link_to_remove_fields "Remove", f %></div> </br>
 </div>

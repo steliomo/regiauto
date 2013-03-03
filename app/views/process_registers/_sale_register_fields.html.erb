@@ -1,7 +1,8 @@
 <div class="field">
-	<%= f.input :buy_date , :as => :date, :order => [:day, :month, :year] %><br />
-    <%= f.input :value %><br />
-    <%= f.association :seller, :collection => Proprietary.all.collect{|p| [p.name, p.id]} %><br />
-    <%= link_to_remove_fields "remove", f %>
+	<div class="sale_register">	<%= f.input :buy_date , :as => :date, :order => [:day, :month, :year] %>
+	  <%= f.input :value %>
+	  <%= f.association :seller, :collection => Proprietary.all.collect{|p| [p.name, p.id]} %>
+	  <div class='nav'><%= link_to_remove_fields "remove", f %></div>
+	</div>
 </div>
  

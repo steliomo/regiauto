@@ -21,21 +21,21 @@
 	<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
   	<span class="lnk"><%= link_to_add_association "+", f, :proprietary, :class => "btn" %></span>
   	</div>
-  <div class="field vehicle">
+  <div class="field_vehicle">
 	<%= f.fields_for :vehicle do |v| %>
 		<%= render 'vehicle_fields', :f => v %>
 	<% end %>
   </div>
- <div class="field_proprietary">
+ <div class="field_vehicle">
 	<%= f.label :vehicle_id %>
 	<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
 	<div class="lnk"><%= link_to_add_association "+", f, :vehicle, :class => "btn" %></div>
   </div>
   <div class = "field">
-	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false %>
+	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
-    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select...", :required => false %>
+    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
     <%= f.input :notes, :as => :text %>
@@ -46,13 +46,12 @@
   
   <div class="process_menu">                                                             
 	<ul>
-		<li><%= link_to_add_fields "Add Main Register", f, :main_register %></li>
-  		<li><%= link_to_add_fields "Add Sale Register", f, :sale_register %></li>
-  		<li><%= link_to_add_fields "Add Hypothec Register", f, :hypothec %></li>
-  		<li><%= link_to_add_fields "Add Proprietary Register", f, :proprietary_register %></li>
+		<li class="main_register"><%= link_to_add_fields "Add Main Register", f, :main_register %></li>
+  		<li class="sale_register"><%= link_to_add_fields "Add Sale Register", f, :sale_register %></li>
+  		<li class="hypothec"><%= link_to_add_fields "Add Hypothec Register", f, :hypothec %></li>
+  		<li class="proprietary_register"><%= link_to_add_fields "Add Proprietary Register", f, :proprietary_register %></li>
 	</ul>
   </div>
-
   <div class="field">
 	<%= f.simple_fields_for :main_register do |mr| %>
 		<%= render 'main_register_fields', :f => mr %>
