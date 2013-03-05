@@ -30,6 +30,10 @@ function add_fields(link, association, content) {
 	$(".process_menu").after(content.replace(regexp,new_id));  
 }
 
+/*$(this).ready(function() {
+	$(".main_register,.hypothec, .sale_register, .proprietary_register").hide();
+});*/
+
 $(function(){$("#process_register_register_type").click(function() {
   var a = $("#process_register_register_type").val();
   if (a== "registo_inicial"){
