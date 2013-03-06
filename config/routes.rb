@@ -1,5 +1,7 @@
 Regiauto::Application.routes.draw do
   
+  devise_for :users
+
   resources :process_registers
   resources :vehicles
   resources :hypothecs

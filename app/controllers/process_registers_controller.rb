@@ -1,4 +1,6 @@
 class ProcessRegistersController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /process_registers
   # GET /process_registers.xml
   def index
