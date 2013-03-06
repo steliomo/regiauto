@@ -2,7 +2,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.xml
   def index
-    @vehicles = Vehicle.where ("name like ?", "%#{params[:q]}%")
+    @vehicles = Vehicle.where("name like ?", "%#{params[:q]}%")
 
     respond_to do |format|
       format.html # index.html.erb
