@@ -1,5 +1,5 @@
-body,ul, li, a, table, label, p, tr, td, span, textarea{
- 	font: 11px/1.5 "Lucida Grande", Georgia, "Times New Roman", Times, serif;
+body,ul, li, a, table, label, p, tr, td, span, textarea, input{
+ 	font: 11px "Lucida Grande", Georgia, "Times New Roman", Times, serif;
 }
 
 .head {
@@ -79,4 +79,63 @@ body,ul, li, a, table, label, p, tr, td, span, textarea{
 .content .products { 
 	margin: 8px 10px;
 	margin-bottom: 20px;
+}
+
+.login_content {
+  width: 400px;
+  margin: 12% auto;  
+}
+
+.top {
+  margin-bottom:10px;
+  padding:0;
+}
+
+.top img{
+  margin-left:38%;
+}
+
+.top p{
+	text-align:center;
+	margin-left:18px;
+	font-size:12pt;
+	#font-weight:bold;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+.login {
+  width: 400px;
+  height: 120px;
+  padding: 20px 0px 10px 20px;
+  border: 2px solid #FB5707;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #F5F5F5;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.login p{
+	color:red;
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+.logout a{
+	font-weight:bold;
+	padding:5px 15px;
+	margin-right:8px;
+	margin-top:15px;
+	background-color: #FB5707;
+	color: #FFFFFF;
+	border: solid 1px #eee;
+	font-size:9pt;
+	float:right;
+	font-family: Georgia;
+	border-radius: 3px 3px 3px 3px;
+	text-decoration: none;
+}
+
+.logout a:hover{
+	background-color: #952802;
+	border: solid 1px #952802;
+	border-radius: 3px 3px 3px 3px;
 }
