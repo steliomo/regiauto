@@ -35,7 +35,7 @@
 	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
-    <%= f.input :process_status, :collection => ProcessRegister::STATUS, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
+    <%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
     <%= f.input :notes, :as => :text %>

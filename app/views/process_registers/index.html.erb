@@ -1,33 +1,30 @@
 <h1>Listing process_registers</h1>
 
+<div class="nav"><%= link_to 'New Process', new_process_register_path %></div>
+
 <table>
   <tr>
-    <th>Proprietary</th>
+    <th>Process Id</th>
+    <th>Poprietary Nuit</th>
     <th>Vehicle</th>
     <th>Register type</th>
     <th>Process status</th>
-    <th>Notes</th>
-    <th>Documents</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Created at</th>
   </tr>
 
 <% @process_registers.each do |process_register| %>
-  <tr>
-    <td><%= process_register.proprietary.name %></td>
+ <tr>
+    <td><%= process_register.id %></td>
+    <td><%= process_register.proprietary.nuit %></td>
     <td><%= process_register.vehicle.name %></td>
     <td><%= process_register.register_type %></td>
     <td><%= process_register.process_status %></td>
-    <td><%= process_register.notes %></td>
-    <td><%= process_register.documents %></td>
-    <td><%= link_to 'Show', process_register %></td>
-    <td><%= link_to 'Edit', edit_process_register_path(process_register) %></td>
-    <td><%= link_to 'Destroy', process_register, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= process_register.created_at.to_formatted_s(:short) %></td>
+    <td class='links'><%= link_to 'S', process_register %></td>
+	<td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_process_register_path(process_register) %></td>
+    <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), process_register, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<div class="nav"><%= link_to 'New Process register', new_process_register_path %></div>
+<div class='paginate'><%= will_paginate @expenses %></div>

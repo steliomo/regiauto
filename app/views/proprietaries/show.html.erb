@@ -1,6 +1,74 @@
-<p>
-	<b>name</b>
-	<%= @proprietary.name %>
-</p>
+<div class="process_register_layout">
+	<p class='id'>
+	  <b>Nuit:</b>
+	  <%= @proprietary.nuit %>
+	</p>
+	<div class='details'>	
+		<p>
+		  <b>Name:</b>
+		 <label><%= @proprietary.name %></label>
+		</p>
+		<p>
+		  <b>Birth Day:</b>
+		  <label><%= @proprietary.birth_day%></label>
+		</p>
 
-<%= link_to "Back", proprietaries_path %>
+		<p>
+		  <b>Occupation:</b>
+		  <label><%= @proprietary.occupation %></label>
+		</p>
+
+		<p>
+		  <b>Address:</b>
+		  <label><%= @proprietary.address %></label>
+		</p>
+		
+		<p>
+		  <b>Contacts:</b>
+		<% @proprietary.contacts.each do |contact| %>
+		  <label>(<%=contact.country_code%>) <%=contact.prefix_code%> <%=contact.number%></label>
+		<% end %>
+		</p>	
+		<p>
+		  <b>Created date:</b>
+		  <label><%= @proprietary.created_at%></label>
+		</p>
+	</div>
+</div>
+
+<div class="process_register_layout">
+	<p class='id'>
+	  <b>Total de viaturas:</b>
+	  <%= @proprietary.vehicles.count %>
+	</p>
+</div>
+
+<table>
+	<tr>
+		<th>Number plate</th>
+		<th>Mark</th>
+		<th>Model</th>
+		<th>Frame Number</th>
+		<th>Engine Number</th>
+		<th>Cylinders Size</th>	
+	</tr>
+	<% @proprietary.vehicles.each do |vehicle| %>
+		<tr>
+			<td><%= vehicle.name %></td>
+			<td><%= vehicle.mark %></td>
+			<td><%= vehicle.model %></td>
+			<td><%= vehicle.frame_number %></td>
+			<td><%= vehicle.engine_number %></td>
+			<td><%= vehicle.cylinders_cc %></td>
+			<td class='links'><%= link_to 'S', vehicle %></td>
+			<td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_vehicle_path(vehicle) %></td>
+		    <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+	<% end %>
+</table>
+<div class="edit_menu">
+	<ul>
+		<li><%= link_to 'Edit', edit_proprietary_path(@proprietary)%></li> 
+		<li><%= link_to "Back", proprietaries_path %></li>
+	</ul>
+</div>

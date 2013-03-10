@@ -139,3 +139,37 @@ body,ul, li, a, table, label, p, tr, td, span, textarea, input{
 	border: solid 1px #952802;
 	border-radius: 3px 3px 3px 3px;
 }
+
+table{ 
+	border-collapse: collapse;
+	margin-left:1px;
+	margin-bottom:15px;
+	cursor:pointer;
+}
+
+table th{ 
+	border: 1px solid #BDC2C3;
+	padding:7px;
+}
+
+table td{ 
+	border: 1px solid #BDC2C3;
+	padding:7px;
+}
+
+table th{
+	background:#C4D3D7;
+}
+
+table tr:hover .links{
+  border: none; 
+  margin: -2px -2px; 
+  float:left;
+  padding: 5px;
+}
+
+.links{
+  float: left;
+  margin: -920px;
+  height: 12px;
+}

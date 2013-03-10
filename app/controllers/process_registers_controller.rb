@@ -4,7 +4,7 @@ class ProcessRegistersController < ApplicationController
   # GET /process_registers
   # GET /process_registers.xml
   def index
-    @process_registers = ProcessRegister.all
+    @process_registers = ProcessRegister.paginate(:page => params[:page], :per_page => 10, :order => :process_status)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -57,6 +57,7 @@ class ProcessRegistersController < ApplicationController
 
   # PUT /process_registers/1
   # PUT /process_registers/1.xml
+  
   def update
     @process_register = ProcessRegister.find(params[:id])
 

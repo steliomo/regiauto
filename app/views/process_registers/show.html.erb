@@ -1,35 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Proprietary:</b>
-  <%= @process_register.proprietary %>
-</p>
+<div class="process_register_layout">
+	<p class='id'>
+	  <b>Process Id:</b>
+	  <%= @process_register.id %>
+	</p>
+	<div class='details'>	
+		<p>
+		  <b>Proprietary Name:</b>
+		 <label><%= @process_register.proprietary.name %></label>
+		</p>
+		<p>
+		  <b>Vehicle number plate:</b>
+		  <label><%= @process_register.vehicle.name %></label>
+		</p>
 
-<p>
-  <b>Vehicle:</b>
-  <%= @process_register.vehicle %>
-</p>
+		<p>
+		  <b>Register type:</b>
+		  <label><%= @process_register.register_type %></label>
+		</p>
 
-<p>
-  <b>Register type:</b>
-  <%= @process_register.register_type %>
-</p>
+		<p>
+		  <b>Process status:</b>
+		  <label><%= @process_register.process_status %></label>
+		</p>
 
-<p>
-  <b>Process status:</b>
-  <%= @process_register.process_status %>
-</p>
+		<p>
+		  <b>Documents:</b>
+		  <label><%= @process_register.documents %></label>
+		</p>
+		
+		<p>
+		  <b>Created date:</b>
+		  <label><%= @process_register.created_at%></label>
+		</p>
+		<p>
+		  <b>Notes:</b>
+		  <label><%= @process_register.notes %></label>
+		</p>
+		
+	</div>
+</div>
 
-<p>
-  <b>Notes:</b>
-  <%= @process_register.notes %>
-</p>
+<div class="edit_menu">
+	<ul>
+		<li><%= link_to 'Edit', edit_process_register_path(@process_register)%></li> 
+		<li><%= link_to 'Back', process_registers_path %></li>
+		<li><%= link_to 'Título Provisório' %></li>
+		<li><%= link_to 'Título' %></li>
+	</ul>
+</div>
 
-<p>
-  <b>Documents:</b>
-  <%= @process_register.documents %>
-</p>
 
-
-<%= link_to 'Edit', edit_process_register_path(@process_register) %> |
-<%= link_to 'Back', process_registers_path %>

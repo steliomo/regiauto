@@ -1,5 +1,7 @@
 class ProcessRegister < ActiveRecord::Base
   
+  after_update :book_register
+  
   has_one :main_register
   has_one :sale_register
   has_one :hypothec
@@ -19,9 +21,29 @@ class ProcessRegister < ActiveRecord::Base
   
   REGISTERTYPE = %w( compra_venda registo_inicial hipoteca registo_propriedade)
   
-  STATUS = %w(Aberto Triado Fechado Aprovado)
+  def self.status(profile)
+    if profile == "Atendedor"
+      %w(Aberto)
+    elsif profile == "Analista"
+       %w(Conforme Inconforme Fechado)
+    else
+      %w(Aprovado Reprovado)
+    end
+  end
   
-  #named_scope :open, :conditions => {:process_status => "Aberto"}
-  #named_scope :closed, :conditions => {:process_status => "Fechado"}
+  scope :open, :conditions => {:process_status => "Aberto"}
+  scope :good, :conditions => {:process_status => "Conforme"}
+  scope :aproved, :conditions => {:process_status => "Aprovado"}
+  
+  def book_register
+    if self.process_status == "Aprovado"
+      @book = Book.where("vehicle_id = ?", "#{self.vehicle_id}").first
+      if @book.nil?
+        Book.create(:proprietary_id => self.proprietary_id, :vehicle_id => self.vehicle_id)
+      else
+        @book.update_attributes(:proprietary_id => self.proprietary_id)
+      end
+    end
+  end
   
 end

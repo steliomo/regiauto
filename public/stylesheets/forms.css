@@ -4,14 +4,6 @@
 	margin-top: 10px;
 }
 
-.content .products table{ 
-	border-collapse: collapse;
-}
-
-.content .products table td,.content .products table th{ 
-	border: 1px solid;
-}
-
 .content .products h1{ 
 	width:250px;
 	padding: 6px;
@@ -36,6 +28,10 @@
 	font-family: Georgia;
 	border-radius: 3px 3px 3px 3px;
 	text-decoration: none;
+}
+
+.content .products .nav{
+	margin-top:12px;
 }
 
 .content .products .nav a:hover{
@@ -117,7 +113,7 @@ form > .field label, .field2 label {
 }
 
 .edit_menu{
-	width: 100px;
+	width:310px;
 }
 
 .edit_menu ul li{
@@ -336,3 +332,4 @@ form > .field label, .field2 label {
 	margin-right:90px;
 	width:100px;
 }
+

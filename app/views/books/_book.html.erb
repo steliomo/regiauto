@@ -1,7 +1,7 @@
 <tr id="book_<%= book.id %>">
  	<td><%= book.proprietary.name %></td>
 	<td><%= book.vehicle.name %></td>
-	<td><%= book.vehicle %></td>
+	<td><%= book.updated_at %></td>
 	<td><%= link_to 'Show', book, :remote => true %></td>
 	<td><%= link_to 'Edit', edit_book_path(book), :remote => true %></td>
 	<td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete, :remote => true %></td>
