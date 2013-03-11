@@ -31,14 +31,19 @@
 		</p>	
 		<p>
 		  <b>Created date:</b>
-		  <label><%= @proprietary.created_at%></label>
+		  <label><%= @proprietary.created_at.to_formatted_s(:long)%></label>
 		</p>
 	</div>
+</div>
+<div class="edit_menu">
+	<ul>
+		<li><%= link_to 'Edit', edit_proprietary_path(@proprietary)%></li> 
+	</ul>
 </div>
 
 <div class="process_register_layout">
 	<p class='id'>
-	  <b>Total de viaturas:</b>
+	  <b>Total de Viatura(s):</b>
 	  <%= @proprietary.vehicles.count %>
 	</p>
 </div>
@@ -68,7 +73,6 @@
 </table>
 <div class="edit_menu">
 	<ul>
-		<li><%= link_to 'Edit', edit_proprietary_path(@proprietary)%></li> 
 		<li><%= link_to "Back", proprietaries_path %></li>
 	</ul>
 </div>

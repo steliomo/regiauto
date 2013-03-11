@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306213252) do
+ActiveRecord::Schema.define(:version => 20130310134556) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
     t.integer  "vehicle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_register_id"
   end
 
   create_table "hypothecs", :force => true do |t|
@@ -48,14 +49,15 @@ ActiveRecord::Schema.define(:version => 20130306213252) do
   end
 
   create_table "process_registers", :force => true do |t|
-    t.integer  "proprietary_id",               :null => false
-    t.integer  "vehicle_id",                   :null => false
-    t.string   "register_type",  :limit => 50
-    t.string   "process_status", :limit => 50
+    t.integer  "proprietary_id",                :null => false
+    t.integer  "vehicle_id",                    :null => false
+    t.string   "register_type",   :limit => 50
+    t.string   "process_status",  :limit => 50
     t.text     "notes"
     t.string   "documents"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "delivery_status"
   end
 
   create_table "proprietaries", :force => true do |t|

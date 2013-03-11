@@ -83,4 +83,13 @@ class ProcessRegistersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # Actualizar o campo devivery_status
+  def delivery_status
+    @process_register = ProcessRegister.find(params[:id])
+    if @process_register.update_attributes(:delivery_status =>true)
+        redirect_to(@process_register, :notice => 'Processo de Entrega Executado com Sucesso')
+    end  
+  end
+  
 end
