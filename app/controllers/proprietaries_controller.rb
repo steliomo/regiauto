@@ -1,5 +1,6 @@
 class ProprietariesController < ApplicationController
   before_filter :load_vehicles 
+#  load_and_authorize_resource
   
   # GET /proprietary
   # GET /proprietary.xml

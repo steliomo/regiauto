@@ -12,20 +12,23 @@
 	<div class="logout">
 		<%= link_to 'Sair', destroy_user_session_path %>
 	</div>
+	<div class="userDetails">
+		<b>Username: </b><label><%=current_user.full_name%></label> | 		
+		<b>Profile: </b><label><%=current_user.profile %></label></br>
+		<b>Last Sign in: </b><label><%=current_user.last_sign_in_at.to_formatted_s(:long)%></label>
+	</div>
  </div>
 <div class="conteiner">	
 	<div class="navigation">
 	  <ul class="orderedList">
 		<li><%= link_to "Home", home_index_path %></li>
 	    <li><%= link_to "Process", process_registers_path %></li>
-		<li><%= link_to "Book Registers", books_path %></li>
 		<li><%= link_to "Proprietaries", proprietaries_path %></li>
 		<li><%= link_to "Vehicles", vehicles_path %></li>
 	  </ul>
 	</div>
 	<div class="content">
 		<div class="products">
-			<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>	
 			<%= yield %>
 		</div>

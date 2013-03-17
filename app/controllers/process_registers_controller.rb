@@ -1,11 +1,19 @@
 class ProcessRegistersController < ApplicationController
   before_filter :authenticate_user!
+  #load_and_authorize_resource
   
   # GET /process_registers
   # GET /process_registers.xml
   def index
-    @process_registers = ProcessRegister.paginate(:page => params[:page], :per_page => 10, :order => :process_status)
-
+    if current_user.profile == "Atendedor"
+      @process_registers = ProcessRegister.incorrect_closed.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
+    elsif current_user.profile == "Analista"
+      @process_registers = ProcessRegister.opened_aproved_reproved.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
+    elsif current_user.profile == "Administrator"
+      @process_registers = ProcessRegister.correct.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
+    else
+      @process_registers = ProcessRegister.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @process_registers }
@@ -83,4 +91,13 @@ class ProcessRegistersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # Actualizar o campo devivery_status
+  def delivery_status
+    @process_register = ProcessRegister.find(params[:id])
+    if @process_register.update_attributes(:delivery_status =>true)
+        redirect_to(@process_register, :notice => 'Processo de Entrega Executado com Sucesso')
+    end  
+  end
+  
 end

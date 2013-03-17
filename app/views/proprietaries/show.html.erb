@@ -31,14 +31,21 @@
 		</p>	
 		<p>
 		  <b>Created date:</b>
-		  <label><%= @proprietary.created_at%></label>
+		  <label><%= @proprietary.created_at.to_formatted_s(:long)%></label>
 		</p>
 	</div>
+</div>
+<div class="edit_menu">
+	<ul>
+		<% if can? :update, @proprietary %>
+		 <li><%= link_to 'Edit', edit_proprietary_path(@proprietary)%></li> 
+		<% end %>
+	</ul>
 </div>
 
 <div class="process_register_layout">
 	<p class='id'>
-	  <b>Total de viaturas:</b>
+	  <b>Total de Viatura(s):</b>
 	  <%= @proprietary.vehicles.count %>
 	</p>
 </div>
@@ -60,7 +67,6 @@
 			<td><%= vehicle.frame_number %></td>
 			<td><%= vehicle.engine_number %></td>
 			<td><%= vehicle.cylinders_cc %></td>
-			<td class='links'><%= link_to 'S', vehicle %></td>
 			<td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_vehicle_path(vehicle) %></td>
 		    <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
 		</tr>
@@ -68,7 +74,6 @@
 </table>
 <div class="edit_menu">
 	<ul>
-		<li><%= link_to 'Edit', edit_proprietary_path(@proprietary)%></li> 
 		<li><%= link_to "Back", proprietaries_path %></li>
 	</ul>
 </div>

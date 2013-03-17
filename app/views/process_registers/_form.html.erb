@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.hidden_field :delivery_status, :value => false %>
   <div class="field_proprietary">
 	<%= f.simple_fields_for :proprietary do |p| %>
 		<%= render 'proprietary_fields', :f => p %>

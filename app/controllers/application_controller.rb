@@ -3,9 +3,14 @@ class ApplicationController < ActionController::Base
   
   layout :select_page
 
+  rescue_from CanCan::AccessDenied do |exception|  
+    flash[:error] = "Access denied!"  
+    redirect_to root_url  
+  end
+
   protected
   def select_page
-    if signed_in?.blank?  
+    if devise_controller? && signed_in?.blank?  
       'login'
     else
       'application'

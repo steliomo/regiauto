@@ -10,32 +10,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306213252) do
+ActiveRecord::Schema.define(:version => 20130310134556) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
     t.integer  "vehicle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "process_register_id"
   end
 
   create_table "hypothecs", :force => true do |t|
-    t.string   "applicant",           :limit => 50
-    t.string   "contract_document",   :limit => 70
+    t.string   "applicant",         :limit => 50
+    t.string   "contract_document", :limit => 70
     t.float    "value"
     t.float    "outsanding"
-    t.string   "dept_origin",         :limit => 50
+    t.string   "dept_origin",       :limit => 50
     t.float    "interest_rate"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "process_register_id"
   end
 
   create_table "main_registers", :force => true do |t|
     t.string   "vehicle_provenience"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "process_register_id"
   end
 
   create_table "phones", :force => true do |t|
@@ -48,14 +47,15 @@ ActiveRecord::Schema.define(:version => 20130306213252) do
   end
 
   create_table "process_registers", :force => true do |t|
-    t.integer  "proprietary_id",               :null => false
-    t.integer  "vehicle_id",                   :null => false
-    t.string   "register_type",  :limit => 50
-    t.string   "process_status", :limit => 50
+    t.integer  "proprietary_id",                :null => false
+    t.integer  "vehicle_id",                    :null => false
+    t.string   "register_type",   :limit => 50, :null => false
+    t.string   "process_status",  :limit => 50
     t.text     "notes"
     t.string   "documents"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "delivery_status"
   end
 
   create_table "proprietaries", :force => true do |t|
@@ -70,18 +70,21 @@ ActiveRecord::Schema.define(:version => 20130306213252) do
 
   create_table "proprietary_registers", :force => true do |t|
     t.date     "aquire_date"
-    t.string   "register_dute",       :limit => 50
+    t.string   "register_dute", :limit => 50
     t.float    "value"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "process_register_id"
   end
 
   create_table "sale_registers", :force => true do |t|
-    t.integer  "process_register_id", :null => false
+    t.string   "name",        :limit => 50, :null => false
+    t.integer  "customer_id",               :null => false
     t.date     "buy_date"
     t.float    "value"
-    t.integer  "seller_id",           :null => false
+    t.integer  "vehicle_id",                :null => false
+    t.integer  "seller_id",                 :null => false
+    t.text     "notes"
+    t.string   "status",      :limit => 30, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

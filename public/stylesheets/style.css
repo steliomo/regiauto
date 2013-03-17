@@ -161,6 +161,10 @@ table th{
 	background:#C4D3D7;
 }
 
+table td:first-child:hover{
+  background:#C4D3D7;
+}
+
 table tr:hover .links{
   border: none; 
   margin: -2px -2px; 
@@ -172,4 +176,18 @@ table tr:hover .links{
   float: left;
   margin: -920px;
   height: 12px;
+}
+
+.userDetails {
+	padding: 15px 2%;
+	float:right;
+	color: #eee;
+}
+
+.userDetails b{
+	font-weight:bold;
+}
+
+.userDetails label{
+	font-style:italic;
 }

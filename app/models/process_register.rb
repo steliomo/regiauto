@@ -31,17 +31,19 @@ class ProcessRegister < ActiveRecord::Base
     end
   end
   
-  scope :open, :conditions => {:process_status => "Aberto"}
-  scope :good, :conditions => {:process_status => "Conforme"}
+  scope :correct, :conditions => {:process_status => "Conforme"}
+  scope :incorrect_closed, where(:process_status => ["Inconforme", "Fechado"], :delivery_status => false)
+  scope :opened, :conditions => {:process_status => "Aberto"}
   scope :aproved, :conditions => {:process_status => "Aprovado"}
+  scope :opened_aproved_reproved, where(:process_status => ["Aberto", "Aprovado","Reprovado"])
   
   def book_register
     if self.process_status == "Aprovado"
       @book = Book.where("vehicle_id = ?", "#{self.vehicle_id}").first
       if @book.nil?
-        Book.create(:proprietary_id => self.proprietary_id, :vehicle_id => self.vehicle_id)
+        Book.create(:proprietary_id => self.proprietary_id, :vehicle_id => self.vehicle_id, :process_register_id => self.id)
       else
-        @book.update_attributes(:proprietary_id => self.proprietary_id)
+        @book.update_attributes(:proprietary_id => self.proprietary_id, :process_register_id => self.id)
       end
     end
   end

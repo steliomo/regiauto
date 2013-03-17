@@ -2,7 +2,10 @@ Regiauto::Application.routes.draw do
   
   devise_for :users, :path_prefix => 'auth', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'register' }  
 
-  resources :process_registers
+  resources :process_registers do
+    get 'delivery_status', :on => :member 
+  end
+   
   resources :vehicles
   resources :hypothecs
   resources :proprietary_registers
@@ -16,7 +19,7 @@ Regiauto::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  #   match 'products/:id' => 'catalog#view'  
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

@@ -44,10 +44,15 @@
 
 <div class="edit_menu">
 	<ul>
-		<li><%= link_to 'Edit', edit_process_register_path(@process_register)%></li> 
+		<% if can? :edit, @process_register %>
+		 <li><%= link_to 'Edit', edit_process_register_path(@process_register)%></li> 
+		<% end %>
 		<li><%= link_to 'Back', process_registers_path %></li>
 		<li><%= link_to 'Título Provisório' %></li>
 		<li><%= link_to 'Título' %></li>
+		<% if can? :update, @process_register %>
+		 <li><%= link_to "Entregar",  :controller => :process_registers, :action => :delivery_status %></li>
+		<% end %>
 	</ul>
 </div>
 

@@ -1,30 +1,75 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Number Plate:</b>
-  <%= @vehicle.name %>
-</p>
-
-<p>
-  <b>Mark:</b>
-  <%= @vehicle.mark %>
-</p>
-
-<p>
-  <b>Model:</b>
-  <%= @vehicle.model %>
-</p>
-
-<p>
-  <b>Frame Number:</b>
-  <%= @vehicle.frame_number %>
-</p>
-
-<p>
-  <b>Engine Number:</b>
-  <%= @vehicle.engine_number %>
-</p>
-
-
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>
+<div class="process_register_layout">
+	<p class='id'>
+	  <b>Number Plate:</b>
+	  <%= @vehicle.name %>
+	</p>
+	<div class='details'>	
+		<p>
+		  <b>Nuit and Name:</b>
+		 <label><%= @vehicle.proprietary.nuit %></label> -
+		 <label><%= @vehicle.proprietary.name %></label>
+		</p>
+		<p>
+		  <b>Mark/Model:</b>
+		 <label><%= @vehicle.mark %></label> / 
+		 <label><%= @vehicle.model %></label>
+		</p>
+		<p>
+		  <b>Frame/Engine:</b>
+		  <label><%= @vehicle.frame_number %></label> / 
+		  <label><%= @vehicle.engine_number %></label>
+		</p>
+		<p>
+		  <b>Cylinders/CC:</b>
+		 <label><%= @vehicle.cylinders %></label> / 
+		 <label><%= @vehicle.cylinders_cc %> cc</label>
+		</p>
+		<p>
+		  <b>Petrol:</b>
+		  <label><%= @vehicle.petrol %></label>
+		</p>
+		<p>
+		  <b>Transmission:</b>
+		  <label><%= @vehicle.transmission %></label>
+		</p>
+		<p>
+		  <b>Pneumatic Measures:</b>
+		  <label><%= @vehicle.pneumatic_measures %></label>
+		</p>
+		<p>
+		  <b>Petrol:</b>
+		  <label><%= @vehicle.petrol %></label>
+		</p>
+		<p>
+		  <b>Gross Weight/Tare:</b>
+		  <label><%= @vehicle.gross_weight %></label> / 
+		  <label><%= @vehicle.tare %></label>
+		</p>
+		<p>
+		  <b>Stocking:</b>
+		  <label><%= @vehicle.stocking %></label>
+		</p>
+		<p>
+		  <b>Color:</b>
+		  <label><%= @vehicle.color %></label>
+		</p>
+		<p>
+		  <b>Service:</b>
+		  <label><%= @vehicle.service %></label>
+		</p>
+		<p>
+		  <b>Created At:</b>
+		  <label><%= @vehicle.created_at.to_formatted_s(:long) %></label>
+		</p>
+	</div>
+</div>
+<div class="edit_menu">
+	<ul>
+		<% if can? :update, @vehicle %>
+		 <li><%= link_to 'Edit', edit_vehicle_path(@vehicle) %></li> 
+		<% end %>
+		 <li><%= link_to 'Back', vehicles_path %></li> 
+	</ul>
+</div>

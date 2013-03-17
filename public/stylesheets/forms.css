@@ -113,7 +113,8 @@ form > .field label, .field2 label {
 }
 
 .edit_menu{
-	width:310px;
+	width:338px;
+	margin-bottom: 15px;
 }
 
 .edit_menu ul li{
