@@ -48,4 +48,13 @@ class ProcessRegister < ActiveRecord::Base
     end
   end
   
+  private
+  def self.search(search)
+    if search
+      where('id like ?', "#{search}")
+    else
+      scoped
+    end
+  end
+  
 end

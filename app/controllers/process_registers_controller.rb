@@ -8,7 +8,7 @@ class ProcessRegistersController < ApplicationController
     if current_user.profile == "Atendedor"
       @process_registers = ProcessRegister.incorrect_closed.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
     elsif current_user.profile == "Analista"
-      @process_registers = ProcessRegister.opened_aproved_reproved.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
+      @process_registers = ProcessRegister.search(params[:search]).opened_aproved_reproved.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
     elsif current_user.profile == "Administrator"
       @process_registers = ProcessRegister.correct.paginate(:page => params[:page], :per_page => 10, :order => :id, :include =>[:proprietary, :vehicle])
     else
@@ -17,6 +17,7 @@ class ProcessRegistersController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @process_registers }
+      format.js
     end
   end
 

@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Process Id</th>
+    <th>Poprietary Nuit</th>
+    <th>Vehicle</th>
+    <th>Register type</th>
+    <th>Process status</th>
+    <th>Created at</th>
+  </tr>
+
+<% @process_registers.each do |process_register| %>
+ <tr>
+    <td onclick="location.href='process_registers/<%=process_register.id%>'"><%= process_register.id %></td>
+    <td><%= process_register.proprietary.nuit %></td>
+    <td><%= process_register.vehicle.name %></td>
+    <td><%= process_register.register_type %></td>
+    <td><%= process_register.process_status %></td>
+    <td><%= process_register.created_at.to_formatted_s(:short) %></td>
+	<% if can? :update, process_register  %>
+	 <td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_process_register_path(process_register) %></td>
+	<% end %>
+	<% if can? :destroy, process_register  %>
+     <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), process_register, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>

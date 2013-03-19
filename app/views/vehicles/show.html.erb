@@ -6,11 +6,13 @@
 	  <%= @vehicle.name %>
 	</p>
 	<div class='details'>	
+	  <% unless @vehicle.proprietary.nil? %>
 		<p>
 		  <b>Nuit and Name:</b>
 		 <label><%= @vehicle.proprietary.nuit %></label> -
 		 <label><%= @vehicle.proprietary.name %></label>
 		</p>
+	  <% end %>
 		<p>
 		  <b>Mark/Model:</b>
 		 <label><%= @vehicle.mark %></label> / 
