@@ -50,10 +50,12 @@ class ProcessRegister < ActiveRecord::Base
   
   private
   def self.search(search)
-    if search
-      where('id like ?', "#{search}")
-    else
+    if search.nil? 
+     scoped
+    elsif search.empty?
       scoped
+    else
+      where('id like ?', "#{search}")
     end
   end
   

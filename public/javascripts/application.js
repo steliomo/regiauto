@@ -55,9 +55,9 @@ $(function(){$("#process_register_register_type").click(function() {
 
 //search action
 $(function () {  
- $('#process_search input').keyup(function () {  
-   $.get($('#process_search').attr('action'),
-     $('#process_search').serialize(), null, 'script');  
+ $('#search input').keyup(function () {  
+   $.get($('#search').attr('action'),
+     $('#search').serialize(), null, 'script');  
    return false;  
  });
 });
