@@ -53,12 +53,18 @@ $(function(){$("#process_register_register_type").click(function() {
 });
 
 
-//search action
 $(function () {  
- $('#search input').keyup(function () {  
-   $.get($('#search').attr('action'),
-     $('#search').serialize(), null, 'script');  
+ //search action
+ $('#search').submit(function () {  
+   $.get(this.action, $(this).serialize(), null, 'script');  
    return false;  
  });
+ 
+ //pagination
+ /*$('.pagination a').live('click',
+    function(){
+	$.getScript(this.href);
+	return false;
+ });*/
 });
  

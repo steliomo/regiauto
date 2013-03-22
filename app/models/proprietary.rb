@@ -10,4 +10,14 @@ class Proprietary < ActiveRecord::Base
   
   accepts_nested_attributes_for :contacts, :allow_destroy => true
   
+  private
+  def self.search(search)
+    if search.nil? 
+     scoped
+    elsif search.empty?
+      scoped
+    else
+      where('nuit like ?', "#{search}")
+    end
+  end
 end

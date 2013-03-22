@@ -2,30 +2,13 @@
 
 <div class="nav"><%= link_to "New Proprietary", new_proprietary_path %></div>
 
-<table>
-	<tr>
-		<th>Nuit</th>
-		<th>Name</th>
-		<th>Birth Day</th>
-		<th>Occupation</th>
-		<th>Created At</th>
-	</tr>
+<div class='search_field'>
+  <%= form_tag proprietaries_path, :method => 'get', :id => "search" do %>
+	 <%= text_field_tag :search, params[:search], :placeholder => "Search", :autocomplete => :off,  :id => "field_search"%>
+	 <%= submit_tag 'Search', :search => '' %>
+  <% end %>
+</div>
 
-  <% @proprietaries.each do |proprietary| %>
-    <tr>
-		<td onclick="location.href='proprietaries/<%=proprietary.id%>'"><%= proprietary.nuit %></td>
-		<td><%= proprietary.name %></td>
-		<td><%= proprietary.birth_day %></td>
-		<td><%= proprietary.occupation %></td>
-		<td><%= proprietary.created_at.to_formatted_s(:short) %></td>
-		<% if can? :update, proprietary %>
-		 <td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_proprietary_path(proprietary)  %></td>
-		<% end %>
-		<% if can? :destroy, proprietary%>
-	     <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), proprietary, :confirm => 'Are you sure?', :method => :delete %></td>
-		<% end %>
-	</tr>
-  <% end %>	
-</table>
+<div id='proprietaries'><%= render 'proprietaries' %></div>
 
 <div class='paginate'><%= will_paginate @proprietaries %></div>

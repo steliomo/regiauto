@@ -1,0 +1,25 @@
+<table>
+	<tr>
+		<th>Nuit</th>
+		<th>Name</th>
+		<th>Birth Day</th>
+		<th>Occupation</th>
+		<th>Created At</th>
+	</tr>
+
+  <% @proprietaries.each do |proprietary| %>
+    <tr>
+		<td onclick="location.href='proprietaries/<%=proprietary.id%>'"><%= proprietary.nuit %></td>
+		<td><%= proprietary.name %></td>
+		<td><%= proprietary.birth_day %></td>
+		<td><%= proprietary.occupation %></td>
+		<td><%= proprietary.created_at.to_formatted_s(:short) %></td>
+		<% if can? :update, proprietary %>
+		 <td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_proprietary_path(proprietary)  %></td>
+		<% end %>
+		<% if can? :destroy, proprietary%>
+	     <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), proprietary, :confirm => 'Are you sure?', :method => :delete %></td>
+		<% end %>
+	</tr>
+  <% end %>	
+</table>

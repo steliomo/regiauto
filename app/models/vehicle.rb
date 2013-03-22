@@ -11,5 +11,16 @@ class Vehicle < ActiveRecord::Base
   
   PETROL = %w(Gasolina Diesel Gas)
   TRANS = %w(Automatico Manual)
+
+  private
+  def self.search(search)
+    if search.nil? 
+     scoped
+    elsif search.empty?
+      scoped
+    else
+      where('name like ?', "#{search}")
+    end
+  end
   
 end
