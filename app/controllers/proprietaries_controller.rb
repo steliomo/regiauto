@@ -19,7 +19,7 @@ class ProprietariesController < ApplicationController
   # GET /proprietary/1.xml
   def show
     @proprietary = Proprietary.find(params[:id])
-
+    @vehicles = @proprietary.vehicles.paginate(:page => params[:page], :per_page => 8, :order => :name)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @proprietary }

@@ -9,14 +9,12 @@
 	</tr>
 	<% @vehicles.each do |vehicle| %>
 		<tr>
-			<td onclick="location.href='vehicles/<%=vehicle.id%>'"><%= vehicle.name %></td>
+			<td onclick="location.href='<%=vehicle_path(vehicle)%>'"><%= vehicle.name %></td>
 			<td><%= vehicle.mark %></td>
 			<td><%= vehicle.model %></td>
 			<td><%= vehicle.engine_number %></td>
 			<td><%= vehicle.cylinders %></td>
 			<td><%= vehicle.cylinders_cc %></td>
-			<td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_vehicle_path(vehicle)  %></td>
-			<td class='links'><%= link_to image_tag('del.gif', :alt=> "Delete"), vehicle, :confirm => "Are you sure", :method => :delete %></td>
 		</tr>
 	<% end %>
 </table>

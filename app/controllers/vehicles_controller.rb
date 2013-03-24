@@ -5,7 +5,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles.xml
   def index
     @vehicles = Vehicle.search(params[:search]).where("name like ?", "%#{params[:q]}%").paginate(:page => params[:page], :per_page => 10, :order => :id)
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @vehicles }

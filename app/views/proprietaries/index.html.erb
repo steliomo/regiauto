@@ -1,7 +1,5 @@
 <h1>Listing proprietaries</h1>
 
-<div class="nav"><%= link_to "New Proprietary", new_proprietary_path %></div>
-
 <div class='search_field'>
   <%= form_tag proprietaries_path, :method => 'get', :id => "search" do %>
 	 <%= text_field_tag :search, params[:search], :placeholder => "Search", :autocomplete => :off,  :id => "field_search"%>

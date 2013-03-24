@@ -1,5 +1,5 @@
 class Vehicle < ActiveRecord::Base
-
+  
   has_many :process_registers, :dependent => :destroy
   has_many :books
   has_one :proprietary, :through => :books
