@@ -1,0 +1,31 @@
+pt:
+    back: "Voltar"
+    layouts:
+        application:
+            home: "Página Inicial"
+            process: "Processos "
+            proprietaries: "Titulares"
+            vehicles: "Veículos"
+            profile: "Perfil"
+            last_sign_in: "Último acesso"
+            
+    process_registers:
+        index:
+            title: "Lista de processos"
+            new_process: "Novo processo"
+        new:
+            title: "Criar Processos"
+    
+    activerecord:
+        models:
+            process_register:
+                one: "Processo"
+                other: "Processos"
+        attributes:
+            process_register:
+                proprietary_id: "Proprietário"
+                vehicle_id: "Veículo"
+                register_type: "Tipo de registo"
+                process_status: "Estado do processo"
+                notes: "Notas"
+                documents: "Documentos"            

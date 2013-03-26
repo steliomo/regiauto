@@ -1,6 +1,6 @@
-<h1>Listing process_registers</h1>
+<h1><%= t('process_registers.index.title') %></h1>
 
-<div class="nav"><%= link_to 'New Process', new_process_register_path %></div>
+<div class="nav"><%= link_to t('process_registers.index.new_process'), new_process_register_path %></div>
 
 <div class='search_field'>
   <%= form_tag process_registers_path, :method => 'get', :id => "search" do %>

@@ -10,7 +10,7 @@ class ProcessRegister < ActiveRecord::Base
   belongs_to :proprietary
   belongs_to :vehicle
   
-  validates_presence_of :register_type, :process_status, :proprietary, :vehicle
+  validates_presence_of :register_type, :process_status, :proprietary_id, :vehicle_id
   
   accepts_nested_attributes_for :proprietary, :allow_destroy => true
   accepts_nested_attributes_for :vehicle, :allow_destroy => true
