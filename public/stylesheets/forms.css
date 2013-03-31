@@ -123,6 +123,7 @@ form > .field label, .field2 label {
 .edit_menu{
 	width:338px;
 	margin-bottom: 15px;
+	margin-left:2px;
 }
 
 .edit_menu ul li{

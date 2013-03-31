@@ -1,7 +1,7 @@
 <%= simple_form_for(@process_register) do |f| %>
   <% if @process_register.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@process_register.errors.count, "error") %> prohibited this process_register from being saved:</h2>
+      <h2>Não foi possivel gravar o processo <%= pluralize(@process_register.errors.count, "erro") %> :</h2>
 
       <ul>
       <% @process_register.errors.full_messages.each do |msg| %>
@@ -10,12 +10,14 @@
       </ul>
     </div>
   <% end %>
+
   <%= f.hidden_field :delivery_status, :value => false %>
-  <div class="field_proprietary">
+
+   <div class="field_proprietary">
 	<%= f.simple_fields_for :proprietary do |p| %>
 		<%= render 'proprietary_fields', :f => p %>
 	<% end %>
-  </div>
+   </div>
    <div class="field_proprietary">
 	<%= f.label :proprietary_id %>
 	<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
@@ -35,7 +37,7 @@
 	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
-    <%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
+    <%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Seleccione...", :required => false, :input_html => { :style => "width: 218px;"} %>
   </div>
   <div class="field">
     <%= f.input :notes, :as => :text %>

@@ -13,7 +13,7 @@ class Proprietary < ActiveRecord::Base
   private
   def self.search(search)
     if search.nil? 
-     scoped
+      scoped
     elsif search.empty?
       scoped
     else

@@ -6,15 +6,9 @@ Regiauto::Application.routes.draw do
     get 'delivery_status', :on => :member 
   end
    
-  resources :vehicles
-  resources :hypothecs
-  resources :proprietary_registers
-  resources :sale_registers
-  resources :books
-  resources :main_registers
-  resources :proprietaries
+  resources :vehicles, :hypothecs, :proprietary_registers, :sale_registers, :books, :main_registers, :proprietaries
   resources :home, :only => :index 
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

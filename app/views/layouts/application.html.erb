@@ -10,11 +10,11 @@
  <div class="head">
  	<label class="lbs">Registo Automóvel</label>
 	<div class="logout">
-		<%= link_to 'Sair', destroy_user_session_path %>
+		<%= link_to t(:logout), destroy_user_session_path %>
 	</div>
 	<div class="userDetails">
-		<b>Username: </b><label><%=current_user.full_name%></label> | 		
-		<b><%=t (:profile, :scope => "layouts.application")%>: </b><label><%=current_user.profile %></label></br>
+		<b><%= t(:username, :scope => "layouts.application")%>: </b><label><%=current_user.full_name%></label> | 		
+		<b><%= t(:profile, :scope => "layouts.application")%>: </b><label><%=current_user.profile %></label></br>
 		<b><%= t(:last_sign_in, :scope => "layouts.application")%>: </b><label><%=l(current_user.last_sign_in_at, :format => :special)%></label>
 	</div>
  </div>

@@ -4,8 +4,8 @@
 
 <div class='search_field'>
   <%= form_tag process_registers_path, :method => 'get', :id => "search" do %>
-	 <%= text_field_tag :search, params[:search], :placeholder => "Search", :autocomplete => :off,  :id => "field_search"%>
-	 <%= submit_tag 'Search', :search => nil %>
+	 <%= text_field_tag :search, params[:search], :placeholder => t(:search), :autocomplete => :off,  :id => "field_search"%>
+	 <%= submit_tag t(:search), :search => nil %>
   <% end %>
 </div>
 

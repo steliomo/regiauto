@@ -1,11 +1,11 @@
 <table>
   <tr>
-    <th>Process Id</th>
-    <th>Poprietary Nuit</th>
-    <th>Vehicle</th>
-    <th>Register type</th>
-    <th>Process status</th>
-    <th>Created at</th>
+    <th><%= t(:process_id, :scope => "process_registers.index")%></th>
+    <th><%= t(:nuit, :scope => "process_registers.index")%></th>
+    <th><%= t(:vehicle, :scope => "process_registers.index")%></th>
+    <th><%= t(:register_type, :scope => "process_registers.index")%></th>
+    <th><%= t(:process_status, :scope => "process_registers.index")%></th>
+    <th><%= t(:created_at, :scope => "process_registers.index")%></th>
   </tr>
 
 <% @process_registers.each do |process_register| %>

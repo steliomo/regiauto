@@ -49,7 +49,7 @@
 		 <li><%= link_to 'Edit', edit_process_register_path(@process_register)%></li> 
 		<% end %>
 		<li><%= link_to 'Back', process_registers_path %></li>
-		<li><%= link_to 'Título', process_register_path(@process_register, :format => "pdf")  %></li>
+		<li><%= link_to 'Título', process_register_path(@process_register, :format => "pdf")%></li>
 		<% if can? :update, @process_register %>
 		 <li><%= link_to "Entregar",  :controller => :process_registers, :action => :delivery_status %></li>
 		<% end %>

@@ -27,16 +27,14 @@
 }
 
 .paginate{
-	margin-bottom:48px;
-	margin-left:-2px;
+	margin-bottom:15px;
+	margin-left:2px;
 }
 
 .paginate div a, .paginate div em, .paginate div span {
  border-radius: 3px 3px 3px 3px;
  background-color: #FB5707;
- float:left;
- padding: 3px;
- margin: 0px 2px;
+ padding: 4px 4px;
  color: #FFFFFF;
  font-weight: bold;
  text-align: center;
