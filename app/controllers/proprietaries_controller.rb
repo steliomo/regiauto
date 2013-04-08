@@ -51,7 +51,7 @@ class ProprietariesController < ApplicationController
 
     respond_to do |format|
       if @proprietary.save
-        format.html { redirect_to(@proprietary, :notice => 'Proprietary was successfully created.') }
+        format.html { redirect_to(new_process_register_url, :notice => 'Proprietary was successfully created.') }
         format.xml  { render :xml => @proprietary, :status => :created, :location => @proprietary}
         format.js
       else

@@ -49,7 +49,7 @@ class VehiclesController < ApplicationController
 
     respond_to do |format|
       if @vehicle.save
-        format.html { redirect_to(@vehicle, :notice => 'Vehicle was successfully created.') }
+        format.html { redirect_to(new_process_register_url, :notice => 'Vehicle was successfully created.') }
         format.xml  { render :xml => @vehicle, :status => :created, :location => @vehicle }
         format.js
       else

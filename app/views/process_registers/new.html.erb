@@ -1,5 +1,7 @@
 <h1><%= t(".title")%></h1>
 
-<%= render 'form' %>
+<p id="notice"><%= notice %></p>
+
+<div class='process_register'><%= render 'form' %></div>
 
 <div class="nav"><%= link_to t(:back), process_registers_path %></div>

@@ -1,50 +1,40 @@
 <%= simple_form_for(@process_register) do |f| %>
-  <% if @process_register.errors.any? %>
-    <div id="error_explanation">
-      <h2>Não foi possivel gravar o processo <%= pluralize(@process_register.errors.count, "erro") %> :</h2>
+	<% if @process_register.errors.any? %>
+	  <div id="error_explanation">
+	    <h2>Não foi possivel gravar o processo <%= pluralize(@process_register.errors.count, "erro") %> :</h2>
 
-      <ul>
-      <% @process_register.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= f.hidden_field :delivery_status, :value => false %>
-
-   <div class="field_proprietary">
-	<%= f.simple_fields_for :proprietary do |p| %>
-		<%= render 'proprietary_fields', :f => p %>
+	    <ul>
+	    <% @process_register.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
 	<% end %>
-   </div>
-   <div class="field_proprietary">
-	<%= f.label :proprietary_id %>
-	<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
-  	<span class="lnk"><%= link_to_add_association "+", f, :proprietary, :class => "btn" %></span>
-  	</div>
-  <div class="field_vehicle">
-	<%= f.fields_for :vehicle do |v| %>
-		<%= render 'vehicle_fields', :f => v %>
-	<% end %>
-  </div>
- <div class="field_vehicle">
-	<%= f.label :vehicle_id %>
-	<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
-	<div class="lnk"><%= link_to_add_association "+", f, :vehicle, :class => "btn" %></div>
-  </div>
-  <div class = "field">
-	<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
-  </div>
-  <div class="field">
-    <%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Seleccione...", :required => false, :input_html => { :style => "width: 218px;"} %>
-  </div>
-  <div class="field">
-    <%= f.input :notes, :as => :text %>
-  </div>
-  <div class="field2">
-    <%= f.input :documents %>
-  </div>
+
+	<%= f.hidden_field :delivery_status, :value => false %>
+
+	<div class="field_proprietary">
+		<%= f.label :proprietary_id, :required => false %>
+		<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary.to_a.map(&:attributes).to_json %>
+		<span class="lnk"><%= link_to "+", new_proprietary_path, :class => "btn" %></span>
+	</div>
+	<div class="field_vehicle">
+		<%= f.label :vehicle_id, :required => false %>
+		<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle.to_a.map(&:attributes).to_json %>
+		<div class="lnk"><%= link_to "+", new_vehicle_path, :class => "btn" %></div>
+	</div>
+	<div class="field">
+		<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
+	</div>
+	<div class="field">
+		<%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Seleccione...", :required => false, :input_html => { :style => "width: 218px;"} %>
+	</div>
+	<div class="field">
+		<%= f.input :notes, :as => :text %>
+	</div>
+	<div class="field">
+		<%= f.input :documents %>
+	</div>
   
   <div class="process_menu">                                                             
 	<ul>

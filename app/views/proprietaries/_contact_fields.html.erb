@@ -1,9 +1,7 @@
-<div class="field">
-	<%= f.label :country_code %>
-	<%= f.text_field :country_code %>
-	<%= f.label :prefix_code %>
-	<%= f.text_field :prefix_code %>
-	<%= f.label :number %>
-	<%= f.text_field :number %>
-	<%= link_to_remove_fields "remove", f %>
+<div class="field contacts">
+	<%= f.label :phone %>
+	<b class='country_code'><%= f.text_field :country_code, :maxlength => 3 %></b>
+	<b class='prefix_code'><%= f.text_field :prefix_code, :maxlength => 2 %></b>
+	<b class='number'><%= f.text_field :number, :maxlength => 7 %></b>
+	<b class='nav'><%= link_to_remove_fields "x", f %></b>
 </div>

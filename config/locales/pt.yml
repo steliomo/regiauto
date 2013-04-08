@@ -3,6 +3,8 @@ pt:
     search: "Pesquisar"
     login: "Entrar"
     logout: "Sair"
+    username: "Usuário"
+    password: "Senha"
 
     layouts:
         application:

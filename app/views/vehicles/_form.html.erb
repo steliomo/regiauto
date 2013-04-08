@@ -1,6 +1,4 @@
-<div class="vehicle">
-<%=field_set_tag do %>
-<%= form_for (@vehicle, :remote => true ) do |f|  %>
+<%= simple_form_for (@vehicle) do |f|  %>
 	<% if @vehicle.errors.any? %>
 	    <div id="error_explanation">
 	      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
@@ -12,74 +10,29 @@
 	      </ul>
 	    </div>
 	<% end %>
-<div id="part1">	
-	<div class="field2">
-		<%= f.label :name, "Number plate" %>
-		<%= f.text_field :name, :style => "width: 120px;" %>
+	<div class="field_vehicle">
+	<div class="field">
+	  	<%= f.input :name, :label => "Number Plate", :input_html => { :style => "width: 100px;"},:required => false	%>
+		<%= f.input :mark, :required => false, :error => false  %>
+	  	<%= f.input :model, :required => false, :error => false %>
+	  	<%= f.input :frame_number, :required => false, :error => false %>
+	  	<%= f.input :engine_number, :required => false, :error => false %>
+		<b>  	
+			<%= f.input :cylinders, :required => false, :error => false, :input_html => { :style => "width: 60px;"} %>
+			<%= f.input :cylinders_cc, :required => false, :error => false, :input_html => { :style => "width: 100px;"} %>
+	  		<%= f.input :petrol, :collection => Vehicle::PETROL, :prompt => "Select", :required => false, :error => false %>
+	  		<%= f.input :transmission, :collection => Vehicle::TRANS, :prompt => "Select", :required => false, :error => false %>
+		</b>  	
+		<%= f.input :pneumatic_measures, :required => false, :error => false, :input_html => { :style => "width: 150px;"} %>
+	  	<%= f.input :gross_weight, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+	  	<%= f.input :tare, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+	  	<%= f.input :stocking, :required => false, :error => false, :input_html => { :style => "width: 80px;"} %>
+	  	<%= f.input :color, :required => false, :error => false %>
+	  	<%= f.input :service, :required => false, :error => false %>
 	</div>
-	<div class="field2">
-		<%= f.label :mark %>
-		<%= f.text_field :mark %>
 	</div>
-	<div class="field2">
-		<%= f.label :model %>
-		<%= f.text_field :model %>
-	</div>
-	<div class="field2">
-		<%= f.label :frame_number %>
-		<%= f.text_field :frame_number %>
-	</div>
-	<div class="field2">
-		<%= f.label :engine_number %>
-		<%= f.text_field :engine_number %>
-	</div>
-	<div class="field2">
-		<%= f.label :cylinders %>
-		<%= f.text_field :cylinders, :style => "width: 50px;" %>
-	</div>
-	<div class="field2">
-		<%= f.label :cylinders_cc, 'Cylinder Size' %>
-		<%= f.text_field :cylinders_cc %>
-	</div>
-	<div class="field2">
-		<%= f.label :petrol %>
-		<%= f.select :petrol, Vehicle::PETROL, :prompt => "Select"  %>
-	</div>
-</div>
-<div id="part2">	
-	<div class="field2">
-		<%= f.label :transmission %>
-		<%= f.select :transmission, Vehicle::TRANS, :prompt => "Select"  %>
-	</div>
-	<div class="field2">
-		<%= f.label :pneumatic_measures %>
-		<%= f.text_field :pneumatic_measures %>
-	</div>
-	<div class="field2">
-		<%= f.label :gross_weight %>
-		<%= f.text_field :gross_weight %>
-	</div>
-	<div class="field2">
-		<%= f.label :tare %>
-		<%= f.text_field :tare %>
-	</div>
-	<div class="field2">
-		<%= f.label :stocking %>
-		<%= f.text_field :stocking, :style => "width: 50px;" %>
-	</div>
-	<div class="field2">
-		<%= f.label :color %>
-		<%= f.text_field :color %>
-	</div>
-	<div class="field2">
-		<%= f.label :service %>
-		<%= f.text_field :service %>
-	</div>
-</div>
 	<hr/>
 	<div class="actions">
 		<%= f.submit %>
 	</div>
 <% end %>
-<% end %>
-</div>
