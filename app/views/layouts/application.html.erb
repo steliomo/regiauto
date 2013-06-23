@@ -15,7 +15,7 @@
 	<div class="userDetails">
 		<b><%= t(:username, :scope => "layouts.application")%>: </b><label><%=current_user.full_name%></label> | 		
 		<b><%= t(:profile, :scope => "layouts.application")%>: </b><label><%=current_user.profile %></label></br>
-		<b><%= t(:last_sign_in, :scope => "layouts.application")%>: </b><label><%=l(current_user.last_sign_in_at, :format => :special)%></label>
+		<b><%= t(:last_sign_in, :scope => "layouts.application")%>: </b><label><%=l(current_user.last_sign_in_at)%></label>
 	</div>
  </div>
 <div class="conteiner">	

@@ -23,16 +23,16 @@ class ProcessRegister < ActiveRecord::Base
   scope :incorrect_closed, where(:process_status => ["Inconforme", "Fechado"], :delivery_status => false)
   scope :opened, :conditions => {:process_status => "Aberto"}
   scope :aproved, :conditions => {:process_status => "Aprovado"}
-  scope :opened_aproved_reproved, where(:process_status => ["Aberto", "Aprovado","Reprovado"])
+  scope :opened_aproved_reproved, :conditions =>{:process_status => ["Aberto", "Aprovado","Reprovado"]} 
   
   private
   def book_register
     if self.process_status == "Aprovado"
-      @book = Book.where("vehicle_id = ?", "#{self.vehicle_id}").first
-      if @book.nil?
+      book = Book.where("vehicle_id = ?", "#{self.vehicle_id}")
+      if book.nil?
         Book.create(:proprietary_id => self.proprietary_id, :vehicle_id => self.vehicle_id, :process_register_id => self.id)
       else
-        @book.update_attributes(:proprietary_id => self.proprietary_id, :process_register_id => self.id)
+        book.update_attributes(:proprietary_id => self.proprietary_id, :process_register_id => self.id)
       end
     end
   end
@@ -43,7 +43,7 @@ class ProcessRegister < ActiveRecord::Base
     elsif search.empty?
       scoped
     else
-      where('id like ?', "#{search}")
+      where('id = ?', "#{search}")
     end
   end
 
