@@ -9,22 +9,8 @@
   <% end %>
 </div>
 
-<<<<<<< HEAD
 <% unless @process_registers.empty? %>
-<div id="process"><%= render 'process_registers' %></div>
-=======
-<% @process_registers.each do |process_register| %>
- <tr>
-    <td onclick="location.href='process_registers/<%=process_register.id%>'"><%= process_register.id %></td>
-    <td><%= process_register.proprietary.nuit %></td>
-    <td><%= process_register.vehicle.name %></td>
-    <td><%= process_register.register_type %></td>
-    <td><%= process_register.process_status %></td>
-    <td><%= process_register.created_at.to_formatted_s(:short) %></td>
-    <td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_process_register_path(process_register) %></td>
-    <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), process_register, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
->>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea
+  <div id="process"><%= render 'process_registers' %></div>
 <% end %>
 
-<div class='paginate'><%= will_paginate @expenses %></div>
+<div class='paginate'><%= will_paginate @process_registers %></div>

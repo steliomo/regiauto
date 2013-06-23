@@ -13,13 +13,6 @@ Regiauto::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-<<<<<<< HEAD
-  #   match 'products/:id' => 'catalog#view'  
-=======
-  #   match 'products/:id' => 'catalog#view'
-  match 'process_registers/:id' => 'process_registers#delivery_status'
-  
->>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
