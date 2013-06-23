@@ -4,8 +4,4 @@ log/*.log
 tmp/
 config/*.yml
 Gemfile
-<<<<<<< HEAD
 Gemfile.lock
-=======
-Gemfile.lock
->>>>>>> b420e4e2f6d35f5f7274d5ef388620d48901a97c

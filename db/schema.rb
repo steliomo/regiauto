@@ -49,7 +49,11 @@ ActiveRecord::Schema.define(:version => 20130310134556) do
   create_table "process_registers", :force => true do |t|
     t.integer  "proprietary_id",                :null => false
     t.integer  "vehicle_id",                    :null => false
+<<<<<<< HEAD
     t.string   "register_type",   :limit => 50, :null => false
+=======
+    t.string   "register_type",   :limit => 50
+>>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea
     t.string   "process_status",  :limit => 50
     t.text     "notes"
     t.string   "documents"

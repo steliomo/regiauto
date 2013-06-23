@@ -119,16 +119,21 @@
 }
 
 .edit_menu{
+<<<<<<< HEAD
 	width:338px;
 	margin-bottom: 15px;
 	margin-left:2px;
+=======
+	width:318px;
+	margin-bottom: 15px;
+>>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea
 }
 
 .edit_menu ul li{
 	display: inline;
 }
 
-.edit_menu ul li a{
+.edit_menu ul li a, .edit_menu ul li input{
 	padding: 4px 4px;
 	font-weight:bold;
 	background-color: #FB5707;
@@ -140,7 +145,14 @@
 	text-decoration: none;
 }
 
-.edit_menu ul li a:hover{
+.edit_menu ul li input{
+	float:right;
+	margin: -19px -3px;
+	padding: 3px 4px;
+}
+
+
+.edit_menu ul li a:hover, .edit_menu ul li input:hover{
 	background-color: #952802;
 	border: solid 1px #FFF;
 	border-radius: 3px 3px 3px 3px;

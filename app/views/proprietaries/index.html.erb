@@ -1,5 +1,6 @@
 <h1>Listing proprietaries</h1>
 
+<<<<<<< HEAD
 <div class='search_field'>
   <%= form_tag proprietaries_path, :method => 'get', :id => "search" do %>
 	 <%= text_field_tag :search, params[:search], :placeholder => "Search", :autocomplete => :off,  :id => "field_search"%>
@@ -8,5 +9,31 @@
 </div>
 
 <div id='proprietaries'><%= render 'proprietaries' %></div>
+=======
+<div class="nav"><%= link_to "New Proprietary", new_proprietary_path %></div>
+
+<table>
+	<tr>
+		<th>Nuit</th>
+		<th>Name</th>
+		<th>Birth Day</th>
+		<th>Occupation</th>
+		<th>Created At</th>
+	</tr>
+
+  <% @proprietaries.each do |proprietary| %>
+    <tr>
+		<td><%= proprietary.nuit %></td>
+		<td><%= proprietary.name %></td>
+		<td><%= proprietary.birth_day %></td>
+		<td><%= proprietary.occupation %></td>
+		<td><%= proprietary.created_at.to_formatted_s(:short) %></td>
+		<td class='links'><%= link_to "S", proprietary_path(proprietary) %></td>
+		<td class='links'><%= link_to image_tag('edit.gif', :alt=> "Edit"), edit_proprietary_path(proprietary)  %></td>
+	    <td class='links'><%= link_to image_tag('del.gif', :alt=> "Destroy"), proprietary, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+  <% end %>	
+</table>
+>>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea
 
 <div class='paginate'><%= will_paginate @proprietaries %></div>
