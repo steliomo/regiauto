@@ -2,41 +2,41 @@
 
 <div class="process_register_layout">
 	<p class='id'>
-	  <b>Process Id:</b>
+	  <b><%= t(:process_id, :scope => "process_registers") %>:</b>
 	  <%= @process_register.id %>
 	</p>
 	<div class='details'>	
 		<p>
-		  <b>Nuit and Name:</b>
+		  <b><%= t(:nuit_and_name, :scope => "process_registers.show")%></b>
 		 <label><%= @process_register.proprietary.nuit %></label> - 
 		 <label><%= @process_register.proprietary.name %></label>
 		</p>
 		<p>
-		  <b>Vehicle number plate:</b>
+		  <b><%= t(:vehicle_number_plate, :scope => "process_registers.show")%></b>
 		  <label><%= @process_register.vehicle.name %></label>
 		</p>
 
 		<p>
-		  <b>Register type:</b>
+		  <b><%= t(:register_type, :scope => "process_registers.show")%></b>
 		  <label><%= @process_register.register_type %></label>
 		</p>
 
 		<p>
-		  <b>Process status:</b>
+		  <b><%= t(:process_status, :scope => "process_registers.show") %></b>
 		  <label><%= @process_register.process_status %></label>
 		</p>
 
 		<p>
-		  <b>Documents:</b>
+		  <b><%= t(:documents, :scope => "process_registers.show")%></b>
 		  <label><%= @process_register.documents %></label>
 		</p>
 		
 		<p>
-		  <b>Created date:</b>
+		  <b><%= t(:created_at, :scope => "process_registers")%></b>
 		  <label><%= @process_register.created_at%></label>
 		</p>
 		<p>
-		  <b>Notes:</b>
+		  <b><%= t(:notes, :scope => "process_registers.show")%></b>
 		  <label><%= @process_register.notes %></label>
 		</p>
 		
@@ -46,9 +46,9 @@
 <div class="edit_menu">
 	<ul>
 		<% if can? :edit, @process_register %>
-		 <li><%= link_to 'Edit', edit_process_register_path(@process_register)%></li> 
+		 <li><%= link_to t(:edit), edit_process_register_path(@process_register)%></li> 
 		<% end %>
-		<li><%= link_to 'Back', process_registers_path %></li>
+		<li><%= link_to t(:back), process_registers_path %></li>
 		<li><%= link_to 'Título', process_register_path(@process_register, :format => "pdf")%></li>
 		<% if can? :update, @process_register %>
 		 <li><%= link_to "Entregar",  :controller => :process_registers, :action => :delivery_status %></li>

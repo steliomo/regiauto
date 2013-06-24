@@ -14,12 +14,12 @@
 
 	<div class="field_proprietary">
 		<%= f.label :proprietary_id, :required => false %>
-		<%= f.text_field :proprietary_id, "data-pre" => @process_register.proprietary(&:attributes).to_json %>
+		<%= f.text_field :proprietary_id, "data-pre" => Array(@process_register.proprietary).map(&:attributes).to_json %>
 		<span class="lnk"><%= link_to "+", new_proprietary_path, :class => "btn" %></span>
 	</div>
 	<div class="field_vehicle">
 		<%= f.label :vehicle_id, :required => false %>
-		<%= f.text_field :vehicle_id, "data-pre" => @process_register.vehicle(&:attributes).to_json %>
+		<%= f.text_field :vehicle_id, "data-pre" => Array(@process_register.vehicle).map(&:attributes).to_json %>
 		<div class="lnk"><%= link_to "+", new_vehicle_path, :class => "btn" %></div>
 	</div>
 	<div class="field">
@@ -37,10 +37,10 @@
   
   <div class="process_menu">                                                             
 	<ul>
-		<li class="main_register"><%= link_to_add_fields "Add Main Register", f, :main_register %></li>
-  		<li class="sale_register"><%= link_to_add_fields "Add Sale Register", f, :sale_register %></li>
-  		<li class="hypothec"><%= link_to_add_fields "Add Hypothec Register", f, :hypothec %></li>
-  		<li class="proprietary_register"><%= link_to_add_fields "Add Proprietary Register", f, :proprietary_register %></li>
+		<li class="main_register"><%= link_to_add_fields t(:add_main_register, :scope => "process_registers.new"), f, :main_register %></li>
+  		<li class="sale_register"><%= link_to_add_fields t(:add_sale_register, :scope => "process_registers.new"), f, :sale_register %></li>
+  		<li class="hypothec"><%= link_to_add_fields t(:add_hypothec_register, :scope => "process_registers.new"), f, :hypothec %></li>
+  		<li class="proprietary_register"><%= link_to_add_fields t(:add_proprietary_register, :scope => "process_registers.new"), f, :proprietary_register %></li>
 	</ul>
   </div>
   <div class="field">

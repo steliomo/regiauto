@@ -13,6 +13,7 @@
 	<div class="field_vehicle">
 	<div class="field">
 	  	<%= f.input :name, :label => "Number Plate", :input_html => { :style => "width: 100px;"},:required => false	%>
+		<div><%= f.input :vehicle_type,:collection => Vehicle::TYPE, :required => false, :error => false, :prompt => "Select" %></div>
 		<%= f.input :mark, :required => false, :error => false  %>
 	  	<%= f.input :model, :required => false, :error => false %>
 	  	<%= f.input :frame_number, :required => false, :error => false %>

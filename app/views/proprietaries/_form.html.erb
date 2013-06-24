@@ -21,11 +21,11 @@
 		<%= render 'contact_fields', :f => contact %>
 	<% end %>
 
-	<div class="nav"><%= link_to_add_association "Add Contact", f, :contacts %></div>
+	<div class="nav"><%= link_to_add_association t(:add_contacts, :scope => "proprietaries.new"), f, :contacts %></div>
 </div>
 </div>
  <hr/>
  <div class="actions">
-    <%= f.submit "Add Proprietary" %>
+    <%= f.button :submit %>
   </div>
 <% end %>

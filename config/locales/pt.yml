@@ -1,5 +1,6 @@
 pt:
     back: "Voltar"
+    edit: "Editar"
     search: "Pesquisar"
     login: "Entrar"
     logout: "Sair"
@@ -17,23 +18,45 @@ pt:
             username: "Usuário"
             
     process_registers:
+        process_id: "Nº do Processo"
+        created_at: "Criado Em"
+        
         index:
             title: "Lista de processos"
             new_process: "Novo processo"
-            process_id: "Nº do Processo"
             nuit: "Nuit"
             vehicle: "Matrícula"
             register_type: "Tipo de Registo"
             process_status: "Estado"
-            created_at: "Criado Em"
         new:
-            title: "Criar Processos"
+            title: "Criar Processo"
+            add_main_register: "Registo Inicial"
+            add_sale_register: "Compra e Venda"
+            add_hypothec_register: "Hipoteca"
+            add_proprietary_register: "Registo de Proprietário"
+        show:
+            nuit_and_name: "Nuit e Nome"
+            vehicle_number_plate: "Matrícula do Veículo"
+            register_type: "Tipo de Processo"
+            process_status: "Estado do Processo"
+            documents: "Documentos"
+            notes: "Notas"
+    
+    proprietaries:
+        new:
+            title: "Criar Proprietário"    
+            add_contacts: "Contactos"
     
     activerecord:
         models:
             process_register:
                 one: "Processo"
                 other: "Processos"
+            
+            proprietary:
+                one: "Proprietário"
+                other: "Proprietários"
+                
         attributes:
             process_register:
                 proprietary_id: "Proprietário"
@@ -41,4 +64,11 @@ pt:
                 register_type: "Tipo de registo"
                 process_status: "Estado do processo"
                 notes: "Notas"
-                documents: "Documentos"            
+                documents: "Documentos"
+            
+            proprietary:
+                nuit: "Nuit"
+                name: "Nome"
+                birth_day: "Data de Nascimento"
+                occupation: "Ocupação"
+                address: "Endereço"         

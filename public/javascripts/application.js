@@ -52,8 +52,6 @@ $(function(){$("#process_register_register_type").click(function() {
 });
 });
 
-<<<<<<< HEAD
-
 $(function () {  
  //search action
  $('#search').submit(function () {  
@@ -68,6 +66,3 @@ $(function () {
 	return false;
  });*/
 });
- 
-=======
->>>>>>> 161cc432f0f735d367f1862fed50dd40d21c1dea

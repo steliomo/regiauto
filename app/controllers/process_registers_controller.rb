@@ -102,4 +102,9 @@ class ProcessRegistersController < ApplicationController
     end  
   end
   
+  private
+  def load_proprietaries_and_vehicles
+    
+  end
+  
 end
