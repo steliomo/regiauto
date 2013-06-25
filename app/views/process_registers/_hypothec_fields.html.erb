@@ -3,9 +3,9 @@
 	  <%= f.input :applicant %>
 	  <%= f.input :contract_document %>
 	  <%= f.input :value, :input_html =>{:style => "width: 100px"} %>
-	  <%= f.input :outsanding, :input_html =>{:style => "width: 100px"} %>
+	  <%= f.input :outstanding, :input_html =>{:style => "width: 100px"} %>
 	  <%= f.input :dept_origin %>
 	  <%= f.input :interest_rate, :input_html =>{:style => "width: 100px"} %>
   </div>
-  <div class='nav'><%= link_to_remove_fields "remove", f %></div>
+  <div class='nav'><%= link_to_remove_fields t(:remove), f %></div>
 </div>

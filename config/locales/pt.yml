@@ -6,6 +6,7 @@ pt:
     logout: "Sair"
     username: "Usuário"
     password: "Senha"
+    remove: "Remover"
 
     layouts:
         application:
@@ -43,9 +44,22 @@ pt:
             notes: "Notas"
     
     proprietaries:
+        created_at: "Criado Em"
+        
         new:
             title: "Criar Proprietário"    
             add_contacts: "Contactos"
+            phone: "Telefone"
+        index:
+            title: "Lista de Proprietários"
+            nuit: "Nuit"
+            name: "Nome"
+            birth_day: "Data de Nascimento"
+            occupation: "Ocupação"
+            
+    vehicles:
+        new:
+            title: "Criar Veículo"    
     
     activerecord:
         models:
@@ -56,6 +70,10 @@ pt:
             proprietary:
                 one: "Proprietário"
                 other: "Proprietários"
+            
+            vehicle:
+                one: "Veículo"
+                others: "Veículos"
                 
         attributes:
             process_register:
@@ -71,4 +89,44 @@ pt:
                 name: "Nome"
                 birth_day: "Data de Nascimento"
                 occupation: "Ocupação"
-                address: "Endereço"         
+                address: "Endereço"
+            
+            vehicle:
+                name: "Matrícula"
+                vehicle_type: "Tipo"
+                mark: "Marca"
+                model: "Modelo"
+                frame_number: "Nº do Quadro"
+                engine_number: "Nº do Motor"
+                pneumatic_measures: "Medidas Pneumáticas"
+                cylinders: "Nº de Cilindros"
+                cylinders_cc: "Cilindrada"
+                petrol: "Combustivel"
+                transmission: "Caixa"
+                gross_weight: "Peso Bruto"
+                tare: "Tara"
+                stocking: "Lotação"
+                color: "Cor"
+                service: "Serviço"
+            
+            main_register:
+                vehicle_provenience: "Proveniência"
+            
+            sale_register:
+                buy_date: "Data da Compra"
+                value: "Valor"
+                seller: "Nome do Vendedor"
+
+            hypothec:
+                applicant: "Requerente"
+                contract_document: "Contrato"
+                value: "Valor"
+                outstanding: "Em Dívida"
+                dept_origin: "Origem"
+                interest_rate: "Taxa de Juros"
+
+            proprietary_register:
+                aquire_date: "Data de Aquisição"
+                register_dute: "Registo"
+                value: "Valor"
+                                

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624121231) do
+ActiveRecord::Schema.define(:version => 20130625211623) do
 
   create_table "books", :force => true do |t|
     t.integer  "proprietary_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20130624121231) do
     t.string   "applicant",           :limit => 50
     t.string   "contract_document",   :limit => 70
     t.float    "value"
-    t.float    "outsanding"
+    t.float    "outstanding"
     t.string   "dept_origin",         :limit => 50
     t.float    "interest_rate"
     t.datetime "created_at"

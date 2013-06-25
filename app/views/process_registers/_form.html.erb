@@ -23,10 +23,10 @@
 		<div class="lnk"><%= link_to "+", new_vehicle_path, :class => "btn" %></div>
 	</div>
 	<div class="field">
-		<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Select...", :required => false, :input_html => { :style => "width: 218px;"} %>
+		<%= f.input :register_type, :collection => ProcessRegister::REGISTERTYPE, :prompt => "Seleccione", :required => false, :input_html => { :style => "width: 218px;"} %>
 	</div>
 	<div class="field">
-		<%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Seleccione...", :required => false, :input_html => { :style => "width: 218px;"} %>
+		<%= f.input :process_status, :collection => ProcessRegister::status(current_user.profile), :prompt => "Seleccione", :required => false, :input_html => { :style => "width: 218px;"} %>
 	</div>
 	<div class="field">
 		<%= f.input :notes, :as => :text %>

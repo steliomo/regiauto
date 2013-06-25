@@ -1,10 +1,10 @@
 <table>
 	<tr>
-		<th>Nuit</th>
-		<th>Name</th>
-		<th>Birth Day</th>
-		<th>Occupation</th>
-		<th>Created At</th>
+		<th><%= t(:nuit, :scope => "proprietaries.index") %></th>
+		<th><%= t(:name, :scope => "proprietaries.index") %></th>
+		<th><%= t(:birth_day, :scope => "proprietaries.index") %></th>
+		<th><%= t(:occupation, :scope => "proprietaries.index") %></th>
+		<th><%= t(:created_at, :scope => "proprietaries") %></th>
 	</tr>
 
   <% @proprietaries.each do |proprietary| %>

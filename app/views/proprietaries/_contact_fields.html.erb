@@ -1,5 +1,5 @@
 <div class="field contacts">
-	<%= f.label :phone %>
+	<%= f.label t(:phone, :scope => "proprietaries.new") %>
 	<b class='country_code'><%= f.text_field :country_code, :maxlength => 3 %></b>
 	<b class='prefix_code'><%= f.text_field :prefix_code, :maxlength => 2 %></b>
 	<b class='number'><%= f.text_field :number, :maxlength => 7 %></b>
