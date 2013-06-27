@@ -32,7 +32,7 @@ class ProcessRegister < ActiveRecord::Base
       if book.nil?
         Book.create(:proprietary_id => self.proprietary_id, :vehicle_id => self.vehicle_id, :process_register_id => self.id)
       else
-        book.update_attributes(:proprietary_id => self.proprietary_id, :process_register_id => self.id)
+        book.update_all(:proprietary_id => self.proprietary_id, :process_register_id => self.id)
       end
     end
   end

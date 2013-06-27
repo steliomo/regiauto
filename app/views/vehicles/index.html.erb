@@ -1,11 +1,11 @@
 <%- title "Vehicles" -%>
 
-<h1>Listing Vehicles</h1>
+<h1><%= t(".title") %></h1>
 
 <div class='search_field'>
   <%= form_tag vehicles_path, :method => 'get', :id => "search" do %>
-	 <%= text_field_tag :search, params[:search], :placeholder => "Search", :autocomplete => :off,  :id => "field_search"%>
-	 <%= submit_tag 'Search', :search => nil %>
+	 <%= text_field_tag :search, params[:search], :placeholder => t(:search), :autocomplete => :off,  :id => "field_search"%>
+	 <%= submit_tag t(:search), :search => nil %>
   <% end %>
 </div>
 

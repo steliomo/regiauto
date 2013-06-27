@@ -5,63 +5,65 @@
 	</p>
 	<div class='details'>	
 		<p>
-		  <b>Name:</b>
+		  <b><%= t(:name, :scope => "proprietaries.index") %>:</b>
 		 <label><%= @proprietary.name %></label>
 		</p>
 		<p>
-		  <b>Birth Day:</b>
+		  <b><%= t(:birth_day, :scope => "proprietaries.index") %>:</b>
 		  <label><%= @proprietary.birth_day%></label>
 		</p>
 
 		<p>
-		  <b>Occupation:</b>
+		  <b><%= t(:occupation, :scope => "proprietaries.index") %>:</b>
 		  <label><%= @proprietary.occupation %></label>
 		</p>
 
 		<p>
-		  <b>Address:</b>
+		  <b><%= t(:address, :scope => "proprietaries.show") %>:</b>
 		  <label><%= @proprietary.address %></label>
 		</p>
 		
 		<p>
-		  <b>Contacts:</b>
+		  <b><%= t(:contacts, :scope => "proprietaries.show") %>:</b>
 		<% @proprietary.contacts.each do |contact| %>
 		  <label>(<%=contact.country_code%>) <%=contact.prefix_code%> <%=contact.number%></label>
 		<% end %>
 		</p>	
 		<p>
-		  <b>Created date:</b>
-		  <label><%= @proprietary.created_at.to_formatted_s(:long)%></label>
+		  <b><%= t(:created_at, :scope => "proprietaries") %>:</b>
+		  <label><%= l(@proprietary.created_at)%></label>
 		</p>
 	</div>
 </div>
 <div class="edit_menu">
 	<ul>
 		<% if can? :update, @proprietary %>
-		 <li><%= link_to 'Edit', edit_proprietary_path(@proprietary) %></li> 
+		 <li><%= link_to t(:edit), edit_proprietary_path(@proprietary) %></li> 
 		<% end %>
 	</ul>
 </div>
 
 <div class="process_register_layout">
 	<p class='id'>
-	  <b>Total de Viatura(s):</b>
+	  <b><%= t(:vehilces, :scope => "proprietaries.show") %>(s):</b>
 	  <%= @proprietary.vehicles.count %>
 	</p>
 </div>
 
 <table>
 	<tr>
-		<th>Number plate</th>
-		<th>Mark</th>
-		<th>Model</th>
-		<th>Frame Number</th>
-		<th>Engine Number</th>
-		<th>Cylinders Size</th>	
+		<th><%= t(:name, :scope => "vehicles.show") %></th>
+		<th><%= t(:vehicle_type, :scope => "vehicles.show") %></th>
+		<th><%= t(:mark, :scope => "vehicles.show") %></th>
+		<th><%= t(:model, :scope => "vehicles.show") %></th>
+		<th><%= t(:frame_number, :scope => "vehicles.show") %></th>
+		<th><%= t(:engine_number, :scope => "vehicles.show") %></th>
+		<th><%= t(:cylinders_cc, :scope => "vehicles.show") %></th>	
 	</tr>
 	<% @vehicles.each do |vehicle| %>
 		<tr>
 			<td><%= vehicle.name %></td>
+			<td><%= vehicle.vehicle_type %></td>
 			<td><%= vehicle.mark %></td>
 			<td><%= vehicle.model %></td>
 			<td><%= vehicle.frame_number %></td>
@@ -75,6 +77,6 @@
 
 <div class="edit_menu">
 	<ul>
-		<li><%= link_to "Back", proprietaries_path %></li>
+		<li><%= link_to t(:back), proprietaries_path %></li>
 	</ul>
 </div>

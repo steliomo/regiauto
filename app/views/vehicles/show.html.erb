@@ -2,76 +2,72 @@
 
 <div class="process_register_layout">
 	<p class='id'>
-	  <b>Number Plate:</b>
+	  <b><%= t(:name, :scope => "vehicles.show") %>:</b>
 	  <%= @vehicle.name %>
 	</p>
 	<div class='details'>	
 	  <% unless @vehicle.proprietary.nil? %>
 		<p>
-		  <b>Nuit and Name:</b>
+		  <b><%= t(:nuit_and_name, :scope => "vehicles.show") %>:</b>
 		 <label><%= @vehicle.proprietary.nuit %></label> -
 		 <label><%= @vehicle.proprietary.name %></label>
 		</p>
 	  <% end %>
 		<p>
-		  <b>Mark/Model:</b>
+		  <b><%= t(:mark, :scope => "vehicles.show") %>/<%= t(:model, :scope => "vehicles.show") %>:</b>
 		 <label><%= @vehicle.mark %></label> / 
 		 <label><%= @vehicle.model %></label>
 		</p>
 		<p>
-		  <b>Frame/Engine:</b>
+		  <b><%= t(:frame_engine_number, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.frame_number %></label> / 
 		  <label><%= @vehicle.engine_number %></label>
 		</p>
 		<p>
-		  <b>Cylinders/CC:</b>
+		  <b><%= t(:cylinders_cylinders_cc, :scope => "vehicles.show") %>:</b>
 		 <label><%= @vehicle.cylinders %></label> / 
 		 <label><%= @vehicle.cylinders_cc %> cc</label>
 		</p>
 		<p>
-		  <b>Petrol:</b>
+		  <b><%= t(:petrol, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.petrol %></label>
 		</p>
 		<p>
-		  <b>Transmission:</b>
+		  <b><%= t(:transmission, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.transmission %></label>
 		</p>
 		<p>
-		  <b>Pneumatic Measures:</b>
+		  <b><%= t(:pneumatic_measures, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.pneumatic_measures %></label>
 		</p>
 		<p>
-		  <b>Petrol:</b>
-		  <label><%= @vehicle.petrol %></label>
-		</p>
-		<p>
-		  <b>Gross Weight/Tare:</b>
+		  <b><%= t(:gross_weight_tare, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.gross_weight %></label> / 
 		  <label><%= @vehicle.tare %></label>
 		</p>
 		<p>
-		  <b>Stocking:</b>
+		  <b><%= t(:stocking, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.stocking %></label>
 		</p>
 		<p>
-		  <b>Color:</b>
+		  <b><%= t(:color, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.color %></label>
 		</p>
 		<p>
-		  <b>Service:</b>
+		  <b><%= t(:service, :scope => "vehicles.show") %>:</b>
 		  <label><%= @vehicle.service %></label>
 		</p>
 		<p>
-		  <b>Created At:</b>
-		  <label><%= @vehicle.created_at.to_formatted_s(:long) %></label>
+		  <b><%= t(:created_at, :scope => "vehicles") %>:</b>
+		  <label><%= l(@vehicle.created_at) %></label>
 		</p>
 	</div>
 </div>
 <div class="edit_menu">
 	<ul>
 		<% if can? :update, @vehicle %>
-		 <li><%= link_to 'Edit', edit_vehicle_path(@vehicle) %></li> 
+		 <li><%= link_to t(:edit), edit_vehicle_path(@vehicle) %></li> 
 		<% end %>
-		 <li><%= link_to 'Back', vehicles_path %></li> 
+		 <li><%= link_to t(:back), vehicles_path %></li> 
 	</ul>
 </div>

@@ -56,10 +56,38 @@ pt:
             name: "Nome"
             birth_day: "Data de Nascimento"
             occupation: "Ocupação"
+        show:
+            address: "Endereço"
+            contacts: "Contactos"
+            vehilces: "Total de Veículo"
             
     vehicles:
+        created_at: "Criado Em"
+
         new:
-            title: "Criar Veículo"    
+            title: "Criar Veículo"
+        show:
+            name: "Matrícula"
+            nuit_and_name: "Nuit e Nome"
+            vehicle_type: "Tipo"
+            mark: "Marca"
+            model: "Modelo"
+            frame_number: "Nº do Quadro"
+            engine_number: "Nº do Motor"
+            cylinders_cc: "Cilindrada"
+            cylinders: "Nº de Cilindros"
+            frame_engine_number: "Nº do Quadro/Motor"
+            cylinders_cylinders_cc: "Nº Cilindros/Cilindrada"
+            petrol: "Combustivel"
+            transmission: "Caixa"
+            gross_weight_tare: "Peso Bruto/Tara"
+            pneumatic_measures: "Medidas Pneumáticas"
+            stocking: "Lotação"
+            color: "Cor"
+            service: "Serviço"
+            
+        index:
+            title: "Lista de Veículos"
     
     activerecord:
         models:
